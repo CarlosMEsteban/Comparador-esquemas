@@ -1,0 +1,66 @@
+package client;
+import client.Utiles;
+
+import javax.swing.JProgressBar;
+
+
+public class comparador {
+
+    
+    Logger bw = null;
+    JProgressBar jProgressBar1;
+        
+  public comparador(JProgressBar jPB) 
+  {
+    jPB.setStringPainted(true);      
+    jProgressBar1 = jPB;
+  }
+    
+    public void compara(String bDDes, String bDOtro, String menuDes, String menuOtro, String fichResultado)  throws Exception
+    {
+      try
+      {
+        System.out.println("//////////////////////////Comenzamos //////////////////////////");
+        
+        // Incio la clase que me va a escribir los scripts en el mismo directorio que el resultado
+        CreaScript.setDirectorio(fichResultado);
+        System.out.println("Vamos a abrir el fichero resultado");
+        bw = new Logger(fichResultado);
+        
+
+
+        if (Utiles.stringConContenido(bDDes))
+        {
+          comparadorBD c = new comparadorBD(jProgressBar1, bw);
+          c.comparaBD(bDDes, bDOtro);
+        }
+        
+        if (Utiles.stringConContenido(menuDes))
+        {
+          comparadorMenus c = new comparadorMenus(jProgressBar1, bw);
+          c.comparaMenus(menuDes, menuOtro);
+        }
+        bw.close();
+        Process proc = Runtime.getRuntime ().exec ("uedit32.exe " + fichResultado);
+        
+        System.out.println("//////////////////////////TERMINAMOS //////////////////////////");
+      }
+      catch (Exception e)
+      {
+        System.out.println("Error en compara: " + e);
+        
+        bw.escribeLinea("Error en compara: " + e);
+        bw.close();
+      }
+    }
+    
+
+    
+
+ 
+
+
+
+
+
+}

@@ -1,0 +1,357 @@
+---------Comenzamos BD-----------------
+
+---------Tablas-----------------
+
+Crear la tabla SARC_CORREOS_X
+Crear la tabla SARC_ENTERADOS
+Crear la tabla SARC_TIPOS_CORREO_X
+Crear la tabla TABLAHIJA
+Crear la tabla TABLAPADRE
+---------columnas-----------------
+
+Hay que añadir las columnas: SARC_ACTIVIDADES.F_CREACION
+Hay que añadir las columnas: SARC_ACTIVIDADES.F_MODIF
+Hay que añadir las columnas: SARC_ACTIVIDADES.U_CREACION
+Hay que añadir las columnas: SARC_ACTIVIDADES.U_MODIF
+Hay que añadir las columnas: SARC_ADHESIONES.F_CREACION
+Hay que añadir las columnas: SARC_ADHESIONES.F_MODIF
+Hay que añadir las columnas: SARC_ADHESIONES.U_CREACION
+Hay que añadir las columnas: SARC_ADHESIONES.U_MODIF
+Hay que añadir las columnas: SARC_ALEGACIONES.F_CREACION
+Hay que añadir las columnas: SARC_ALEGACIONES.F_MODIF
+Hay que añadir las columnas: SARC_ALEGACIONES.U_CREACION
+Hay que añadir las columnas: SARC_ALEGACIONES.U_MODIF
+Hay que añadir las columnas: SARC_ARBITRAJES.A_CAUSA_INHIBICION
+Hay que añadir las columnas: SARC_ARBITRAJES.F_CREACION
+Hay que añadir las columnas: SARC_ARBITRAJES.F_INHIBICION
+Hay que añadir las columnas: SARC_ARBITRAJES.F_MODIF
+Hay que añadir las columnas: SARC_ARBITRAJES.F_NOMBR_ORG
+Hay que añadir las columnas: SARC_ARBITRAJES.U_CREACION
+Hay que añadir las columnas: SARC_ARBITRAJES.U_MODIF
+Hay que añadir las columnas: SARC_ASOC_CONSUM.F_CREACION
+Hay que añadir las columnas: SARC_ASOC_CONSUM.F_MODIF
+Hay que añadir las columnas: SARC_ASOC_CONSUM.U_CREACION
+Hay que añadir las columnas: SARC_ASOC_CONSUM.U_MODIF
+Hay que añadir las columnas: SARC_ASOC_EMPR.F_CREACION
+Hay que añadir las columnas: SARC_ASOC_EMPR.F_MODIF
+Hay que añadir las columnas: SARC_ASOC_EMPR.U_CREACION
+Hay que añadir las columnas: SARC_ASOC_EMPR.U_MODIF
+Hay que añadir las columnas: SARC_BLOBS_DOCUMENTOS.F_CREACION
+Hay que añadir las columnas: SARC_BLOBS_DOCUMENTOS.F_MODIF
+Hay que añadir las columnas: SARC_BLOBS_DOCUMENTOS.U_CREACION
+Hay que añadir las columnas: SARC_BLOBS_DOCUMENTOS.U_MODIF
+Hay que añadir las columnas: SARC_CAMBIOS_ESTADO.F_CREACION
+Hay que añadir las columnas: SARC_CAMBIOS_ESTADO.F_MODIF
+Hay que añadir las columnas: SARC_CAMBIOS_ESTADO.U_CREACION
+Hay que añadir las columnas: SARC_CAMBIOS_ESTADO.U_MODIF
+Hay que añadir las columnas: SARC_CARGOS_JAC.F_CREACION
+Hay que añadir las columnas: SARC_CARGOS_JAC.F_MODIF
+Hay que añadir las columnas: SARC_CARGOS_JAC.U_CREACION
+Hay que añadir las columnas: SARC_CARGOS_JAC.U_MODIF
+Hay que añadir las columnas: SARC_CITAS.F_CREACION
+Hay que añadir las columnas: SARC_CITAS.F_MODIF
+Hay que añadir las columnas: SARC_CITAS.U_CREACION
+Hay que añadir las columnas: SARC_CITAS.U_MODIF
+Hay que añadir las columnas: SARC_CONT_DOCUMENTO.F_CREACION
+Hay que añadir las columnas: SARC_CONT_DOCUMENTO.F_MODIF
+Hay que añadir las columnas: SARC_CONT_DOCUMENTO.U_CREACION
+Hay que añadir las columnas: SARC_CONT_DOCUMENTO.U_MODIF
+Hay que añadir las columnas: SARC_CORREOS.F_CREACION
+Hay que añadir las columnas: SARC_CORREOS.F_MODIF
+Hay que añadir las columnas: SARC_CORREOS.U_CREACION
+Hay que añadir las columnas: SARC_CORREOS.U_MODIF
+Hay que añadir las columnas: SARC_DOC_ALEGACIONES.F_CREACION
+Hay que añadir las columnas: SARC_DOC_ALEGACIONES.F_MODIF
+Hay que añadir las columnas: SARC_DOC_ALEGACIONES.U_CREACION
+Hay que añadir las columnas: SARC_DOC_ALEGACIONES.U_MODIF
+Hay que añadir las columnas: SARC_DOC_FIRMAS.F_CREACION
+Hay que añadir las columnas: SARC_DOC_FIRMAS.F_MODIF
+Hay que añadir las columnas: SARC_DOC_FIRMAS.U_CREACION
+Hay que añadir las columnas: SARC_DOC_FIRMAS.U_MODIF
+Hay que añadir las columnas: SARC_DOCUMENTOS.F_CREACION
+Hay que añadir las columnas: SARC_DOCUMENTOS.F_MODIF
+Hay que añadir las columnas: SARC_DOCUMENTOS.U_CREACION
+Hay que añadir las columnas: SARC_DOCUMENTOS.U_MODIF
+Hay que añadir las columnas: SARC_DOCUMENTOS_JAC.F_CREACION
+Hay que añadir las columnas: SARC_DOCUMENTOS_JAC.F_MODIF
+Hay que añadir las columnas: SARC_DOCUMENTOS_JAC.U_CREACION
+Hay que añadir las columnas: SARC_DOCUMENTOS_JAC.U_MODIF
+Hay que añadir las columnas: SARC_DOCUMENTOS_TMT.F_CREACION
+Hay que añadir las columnas: SARC_DOCUMENTOS_TMT.F_MODIF
+Hay que añadir las columnas: SARC_DOCUMENTOS_TMT.U_CREACION
+Hay que añadir las columnas: SARC_DOCUMENTOS_TMT.U_MODIF
+Hay que añadir las columnas: SARC_ESTADOS.F_CREACION
+Hay que añadir las columnas: SARC_ESTADOS.F_MODIF
+Hay que añadir las columnas: SARC_ESTADOS.U_CREACION
+Hay que añadir las columnas: SARC_ESTADOS.U_MODIF
+Hay que añadir las columnas: SARC_ESTADOS_ARBITRAJE.F_CREACION
+Hay que añadir las columnas: SARC_ESTADOS_ARBITRAJE.F_MODIF
+Hay que añadir las columnas: SARC_ESTADOS_ARBITRAJE.U_CREACION
+Hay que añadir las columnas: SARC_ESTADOS_ARBITRAJE.U_MODIF
+Hay que añadir las columnas: SARC_ESTADOS_SOLI_TMT.F_CREACION
+Hay que añadir las columnas: SARC_ESTADOS_SOLI_TMT.F_MODIF
+Hay que añadir las columnas: SARC_ESTADOS_SOLI_TMT.U_CREACION
+Hay que añadir las columnas: SARC_ESTADOS_SOLI_TMT.U_MODIF
+Hay que añadir las columnas: SARC_JACS.F_CREACION
+Hay que añadir las columnas: SARC_JACS.F_MODIF
+Hay que añadir las columnas: SARC_JACS.U_CREACION
+Hay que añadir las columnas: SARC_JACS.U_MODIF
+Hay que añadir las columnas: SARC_MIEMBROS.A_EMAIL
+Hay que añadir las columnas: SARC_MIEMBROS.F_CREACION
+Hay que añadir las columnas: SARC_MIEMBROS.F_MODIF
+Hay que añadir las columnas: SARC_MIEMBROS.U_CREACION
+Hay que añadir las columnas: SARC_MIEMBROS.U_MODIF
+Hay que añadir las columnas: SARC_NOTIFICACIONES.F_CREACION
+Hay que añadir las columnas: SARC_NOTIFICACIONES.F_MODIF
+Hay que añadir las columnas: SARC_NOTIFICACIONES.U_CREACION
+Hay que añadir las columnas: SARC_NOTIFICACIONES.U_MODIF
+Hay que añadir las columnas: SARC_ORG_ARBITRALES.F_CREACION
+Hay que añadir las columnas: SARC_ORG_ARBITRALES.F_MODIF
+Hay que añadir las columnas: SARC_ORG_ARBITRALES.U_CREACION
+Hay que añadir las columnas: SARC_ORG_ARBITRALES.U_MODIF
+Hay que añadir las columnas: SARC_PERITAJES.F_CREACION
+Hay que añadir las columnas: SARC_PERITAJES.F_MODIF
+Hay que añadir las columnas: SARC_PERITAJES.U_CREACION
+Hay que añadir las columnas: SARC_PERITAJES.U_MODIF
+Hay que añadir las columnas: SARC_PFISICAS.F_CREACION
+Hay que añadir las columnas: SARC_PFISICAS.F_MODIF
+Hay que añadir las columnas: SARC_PFISICAS.U_CREACION
+Hay que añadir las columnas: SARC_PFISICAS.U_MODIF
+Hay que añadir las columnas: SARC_PJURIDICAS.F_CREACION
+Hay que añadir las columnas: SARC_PJURIDICAS.F_MODIF
+Hay que añadir las columnas: SARC_PJURIDICAS.U_CREACION
+Hay que añadir las columnas: SARC_PJURIDICAS.U_MODIF
+Hay que añadir las columnas: SARC_PRESENTADOR.F_CREACION
+Hay que añadir las columnas: SARC_PRESENTADOR.F_MODIF
+Hay que añadir las columnas: SARC_PRESENTADOR.U_CREACION
+Hay que añadir las columnas: SARC_PRESENTADOR.U_MODIF
+Hay que añadir las columnas: SARC_RECUPERA_DOE.A_APELLIDO_1
+Hay que añadir las columnas: SARC_RECUPERA_DOE.A_APELLIDO_2
+Hay que añadir las columnas: SARC_RECUPERA_DOE.A_NOMBRE
+Hay que añadir las columnas: SARC_RECUPERA_DOE.C_NIF
+Hay que añadir las columnas: SARC_REPORTS.C_TIPO_ORGANO
+Hay que añadir las columnas: SARC_REPORTS.F_CREACION
+Hay que añadir las columnas: SARC_REPORTS.F_MODIF
+Hay que añadir las columnas: SARC_REPORTS.U_CREACION
+Hay que añadir las columnas: SARC_REPORTS.U_MODIF
+Hay que añadir las columnas: SARC_REPORTS_ESTADOS.F_CREACION
+Hay que añadir las columnas: SARC_REPORTS_ESTADOS.F_MODIF
+Hay que añadir las columnas: SARC_REPORTS_ESTADOS.U_CREACION
+Hay que añadir las columnas: SARC_REPORTS_ESTADOS.U_MODIF
+Hay que añadir las columnas: SARC_REPR_PJUR.F_CREACION
+Hay que añadir las columnas: SARC_REPR_PJUR.F_MODIF
+Hay que añadir las columnas: SARC_REPR_PJUR.U_CREACION
+Hay que añadir las columnas: SARC_REPR_PJUR.U_MODIF
+Hay que añadir las columnas: SARC_SOLI_JAC.F_CREACION
+Hay que añadir las columnas: SARC_SOLI_JAC.F_MODIF
+Hay que añadir las columnas: SARC_SOLI_JAC.U_CREACION
+Hay que añadir las columnas: SARC_SOLI_JAC.U_MODIF
+Hay que añadir las columnas: SARC_SOLI_TMT.F_CREACION
+Hay que añadir las columnas: SARC_SOLI_TMT.F_MODIF
+Hay que añadir las columnas: SARC_SOLI_TMT.U_CREACION
+Hay que añadir las columnas: SARC_SOLI_TMT.U_MODIF
+Hay que añadir las columnas: SARC_TIPOS_CORREO.F_CREACION
+Hay que añadir las columnas: SARC_TIPOS_CORREO.F_MODIF
+Hay que añadir las columnas: SARC_TIPOS_CORREO.U_CREACION
+Hay que añadir las columnas: SARC_TIPOS_CORREO.U_MODIF
+Hay que añadir las columnas: SARC_TIPOS_DOCUMENTOS.F_CREACION
+Hay que añadir las columnas: SARC_TIPOS_DOCUMENTOS.F_MODIF
+Hay que añadir las columnas: SARC_TIPOS_DOCUMENTOS.U_CREACION
+Hay que añadir las columnas: SARC_TIPOS_DOCUMENTOS.U_MODIF
+Hay que cambiar la estructura de las columnas: SARC_ACTIVIDADES.B_PRODUCTO
+Hay que cambiar la estructura de las columnas: SARC_CONT_DOCUMENTO.B_OBLIGATORIO
+Hay que cambiar la estructura de las columnas: SARC_DOCUMENTOS_JAC.B_VALIDO
+Hay que cambiar la estructura de las columnas: SARC_DOCUMENTOS_TMT.B_VALIDO
+Hay que cambiar la estructura de las columnas: SARC_MIEMBROS.B_ACCESO
+Hay que cambiar la estructura de las columnas: SARC_MIEMBROS.B_ACTIVO
+Hay que cambiar la estructura de las columnas: SARC_PJURIDICAS.B_ACTIVA
+Hay que cambiar la estructura de las columnas: SARC_RECUPERA_DOE.A_USUARIO
+Hay que cambiar la estructura de las columnas: SARC_RECUPERA_DOE.C_IDDOE
+Hay que cambiar la estructura de las columnas: SARC_RECUPERA_DOE.F_CREACION
+Hay que cambiar la estructura de las columnas: SARC_REPORTS.C_TIPO_CORREO
+Hay que cambiar la estructura de las columnas: SARC_REPR_PJUR.B_ACCESO
+---------constraints-----------------
+
+Hay que crear la constraint: SARC_RECUPERA_DOE.CKUSUARIO->(A_USUARIO &lt;> NULL) OR (C_NIF &lt;> NULL)
+Hay que crear la constraint: SARC_RECUPERA_DOE.Constraint de sistema->&quot;C_IDDOE&quot; IS NOT NULL
+Hay que crear la constraint: SARC_RECUPERA_DOE.PKRECDOE->
+Hay que crear la constraint: SARC_REPORTS.Constraint de sistema->C_TIPO_ORGANO IN ('C', 'U')
+Hay que borrar la constraint: SARC_CAMBIOS_ESTADO.Constraint de sistema&quot;C_ESTADO_INICIAL&quot; IS NOT NULL
+Hay que borrar la constraint: SARC_CAMBIOS_ESTADO.Constraint de sistema&quot;C_ESTADO_FINAL&quot; IS NOT NULL
+Hay que borrar la constraint: SARC_CITAS.Constraint de sistema&quot;C_ARBITRAJE_ID&quot; IS NOT NULL
+Hay que borrar la constraint: SARC_CITAS.Constraint de sistema&quot;F_CITA&quot; IS NOT NULL
+Hay que borrar la constraint: SARC_CORREOS.Constraint de sistema&quot;C_CORREO_ID&quot; IS NOT NULL
+Hay que borrar la constraint: SARC_PRESENTADOR.Constraint de sistema&quot;C_PRES_ID&quot; IS NOT NULL
+Hay que borrar la constraint: SARC_RECUPERA_DOE.Constraint de sistema&quot;A_USUARIO&quot; IS NOT NULL
+Hay que borrar la constraint: SARC_RECUPERA_DOE.SARC_RECUPERA_DOE_PK
+Hay que cambiar la constraint: SARC_ALEGACIONES.CKALEPREC_PRESENTADOR IN ('C','E')
+---------índices-----------------
+
+Hay que crear el índice: SARC_ADHESIONES.SYS_IL0000238080C00012$$
+Hay que crear el índice: SARC_BLOBS_DOCUMENTOS.SYS_IL0000276690C00002$$
+Hay que crear el índice: SARC_DOC_ALEGACIONES.SYS_IL0000238083C00004$$
+Hay que crear el índice: SARC_DOC_FIRMAS.SYS_IL0000281237C00005$$
+Hay que crear el índice: SARC_DOC_FIRMAS.SYS_IL0000281237C00006$$
+Hay que crear el índice: SARC_RECUPERA_DOE.PKRECDOE
+---------triggers-----------------
+
+Hay que crear el trigger: SARC_ACTIVIDADES.TRACTIVIDABI
+Hay que crear el trigger: SARC_ACTIVIDADES.TRACTIVIDABU
+Hay que crear el trigger: SARC_ADHESIONES.TRADHESIONBI
+Hay que crear el trigger: SARC_ADHESIONES.TRADHESIONBU
+Hay que crear el trigger: SARC_ALEGACIONES.TRALEGACIOBI
+Hay que crear el trigger: SARC_ALEGACIONES.TRALEGACIOBU
+Hay que crear el trigger: SARC_ARBITRAJES.TRARBITRAJBI
+Hay que crear el trigger: SARC_ARBITRAJES.TRARBITRAJBU
+Hay que crear el trigger: SARC_ASOC_CONSUM.TRASOCCONBI
+Hay que crear el trigger: SARC_ASOC_CONSUM.TRASOCCONBU
+Hay que crear el trigger: SARC_ASOC_EMPR.TRASOCEMPBI
+Hay que crear el trigger: SARC_ASOC_EMPR.TRASOCEMPBU
+Hay que crear el trigger: SARC_BLOBS_DOCUMENTOS.TRBLOBSDOBI
+Hay que crear el trigger: SARC_BLOBS_DOCUMENTOS.TRBLOBSDOBU
+Hay que crear el trigger: SARC_CAMBIOS_ESTADO.TRCAMBIOSBI
+Hay que crear el trigger: SARC_CAMBIOS_ESTADO.TRCAMBIOSBU
+Hay que crear el trigger: SARC_CARGOS_JAC.TRCARGOSJBI
+Hay que crear el trigger: SARC_CARGOS_JAC.TRCARGOSJBU
+Hay que crear el trigger: SARC_CITAS.TRCITASBI
+Hay que crear el trigger: SARC_CITAS.TRCITASBU
+Hay que crear el trigger: SARC_CONT_DOCUMENTO.TRCONTDOCBI
+Hay que crear el trigger: SARC_CONT_DOCUMENTO.TRCONTDOCBU
+Hay que crear el trigger: SARC_CORREOS.TRCORREOSBI
+Hay que crear el trigger: SARC_CORREOS.TRCORREOSBU
+Hay que crear el trigger: SARC_DOC_ALEGACIONES.TRDOCALEGBI
+Hay que crear el trigger: SARC_DOC_ALEGACIONES.TRDOCALEGBU
+Hay que crear el trigger: SARC_DOC_FIRMAS.TRDOCFIRMBI
+Hay que crear el trigger: SARC_DOC_FIRMAS.TRDOCFIRMBU
+Hay que crear el trigger: SARC_DOCUMENTOS.TRDOCUMENTBI
+Hay que crear el trigger: SARC_DOCUMENTOS.TRDOCUMENTBU
+Hay que crear el trigger: SARC_DOCUMENTOS_JAC.TRDOCUMJACBI
+Hay que crear el trigger: SARC_DOCUMENTOS_JAC.TRDOCUMJACBU
+Hay que crear el trigger: SARC_DOCUMENTOS_TMT.TRDOCUMTMTBI
+Hay que crear el trigger: SARC_DOCUMENTOS_TMT.TRDOCUMTMTBU
+Hay que crear el trigger: SARC_ESTADOS.TRESTADOSBI
+Hay que crear el trigger: SARC_ESTADOS.TRESTADOSBU
+Hay que crear el trigger: SARC_ESTADOS_ARBITRAJE.TRESTAARBBI
+Hay que crear el trigger: SARC_ESTADOS_ARBITRAJE.TRESTARBSBU
+Hay que crear el trigger: SARC_ESTADOS_SOLI_TMT.TRESTATMTBI
+Hay que crear el trigger: SARC_ESTADOS_SOLI_TMT.TRESTATMTBU
+Hay que crear el trigger: SARC_JACS.TRJACSBI
+Hay que crear el trigger: SARC_JACS.TRJACSBU
+Hay que crear el trigger: SARC_MIEMBROS.TRMIEMBROSBI
+Hay que crear el trigger: SARC_MIEMBROS.TRMIEMBROSBU
+Hay que crear el trigger: SARC_NOTIFICACIONES.TRNOTIFICABI
+Hay que crear el trigger: SARC_NOTIFICACIONES.TRNOTIFICABU
+Hay que crear el trigger: SARC_ORG_ARBITRALES.TRORGARBIBI
+Hay que crear el trigger: SARC_ORG_ARBITRALES.TRORGARBIBU
+Hay que crear el trigger: SARC_PERITAJES.TRPERITAJEBI
+Hay que crear el trigger: SARC_PERITAJES.TRPERITAJEBU
+Hay que crear el trigger: SARC_PFISICAS.TRPFISICASBI
+Hay que crear el trigger: SARC_PFISICAS.TRPFISICASBU
+Hay que crear el trigger: SARC_PJURIDICAS.TRPJURIDICBI
+Hay que crear el trigger: SARC_PJURIDICAS.TRPJURIDICBU
+Hay que crear el trigger: SARC_PRESENTADOR.TRPRESENTABI
+Hay que crear el trigger: SARC_PRESENTADOR.TRPRESENTABU
+Hay que crear el trigger: SARC_RECUPERA_DOE.TRRECUPERABI
+Hay que crear el trigger: SARC_RECUPERA_DOE.TRRECUPERABU
+Hay que crear el trigger: SARC_REPORTS.TRREPORTSBI
+Hay que crear el trigger: SARC_REPORTS.TRREPORTSBU
+Hay que crear el trigger: SARC_REPORTS_ESTADOS.TRREPOESTBI
+Hay que crear el trigger: SARC_REPORTS_ESTADOS.TRREPOESTBU
+Hay que crear el trigger: SARC_REPR_PJUR.TRREPRPJUBI
+Hay que crear el trigger: SARC_REPR_PJUR.TRREPRPJUBU
+Hay que crear el trigger: SARC_SOLI_JAC.TRSOLIJACBI
+Hay que crear el trigger: SARC_SOLI_JAC.TRSOLIJACBU
+Hay que crear el trigger: SARC_SOLI_TMT.TRSOLITMTBI
+Hay que crear el trigger: SARC_SOLI_TMT.TRSOLITMTBU
+Hay que crear el trigger: SARC_TIPOS_CORREO.TRTIPOSCOBI
+Hay que crear el trigger: SARC_TIPOS_CORREO.TRTIPOSCOBU
+Hay que crear el trigger: SARC_TIPOS_DOCUMENTOS.TRTIPOSDOBI
+Hay que crear el trigger: SARC_TIPOS_DOCUMENTOS.TRTIPOSDOBU
+Hay que borrar el trigger: SARC_RECUPERA_DOE.TRRECDOEBI
+Hay que borrar el trigger: SARC_RECUPERA_DOE.TRRECDOEBU
+---------sinonimos-----------------
+
+Hay que crear el sinónimo: ENTERADOS
+---------secuencias-----------------
+
+---------procedimientos-----------------
+
+---------vistas-----------------
+
+---------permisos-----------------
+
+---------parametros-----------------
+
+Hay que añadir el parámetro: SERVIDOR_CORREO. Valor: mail
+Hay que añadir el parámetro: SCEE_CONTRASENHA_CONEXION_WDM1. Valor: sceePass
+Hay que añadir el parámetro: SCEE_USUARIO_CONEXION_WDM1. Valor: sceeUser
+Hay que añadir el parámetro: SCEE_SERVIDOR_CONEXION_WDM1. Valor: servicioscee
+Hay que añadir el parámetro: PWDPRES. Valor: sarc_pre
+Hay que añadir el parámetro: URL_CSS. Valor: http://jigsaw.w3.org/css-validator/check/referer
+Hay que añadir el parámetro: PUERTO. Valor: 25
+Hay que añadir el parámetro: SCEE_PUERTO_CONEXION_WDM1. Valor: 3120
+Hay que añadir el parámetro: URL_JCYL. Valor: http://www.jcyl.es
+Hay que añadir el parámetro: USUPRES. Valor: sarc_pre
+Hay que añadir el parámetro: URL_XHTML. Valor: http://validator.w3.org/check?uri=referer
+Hay que añadir el parámetro: SCEE_APLICACION_CONEXION_WDM1. Valor: wdm1
+Hay que añadir el parámetro: TIEMPO_REFRESCO_USUARIOS_SEGUNDOS. Valor: 300
+Hay que añadir el parámetro: TIEMPO_REFRESCO_PARAMETROS_APLICACION_SEGUNDOS. Valor: 300
+Hay que añadir el parámetro: URL_LOPD. Valor: http://www.jcyl.es/web/jcyl/Gobierno/es/Plantilla100/1284250111279/_/_/_
+---------Comenzamos menus-----------------
+
+---------Roles que faltan-----------------
+
+HAY QUE AÑADIR EL ROL 'SARC_ALTA
+HAY QUE AÑADIR EL ROL 'SARC_PRE
+HAY QUE AÑADIR EL ROL 'SARC_TEC
+---------Asignaciones que faltan-----------------
+
+Hay que añadir al rol 'SARC_ADM' la función 'SARCPruebaInformes.do'(SARC_110)
+Hay que añadir al rol 'SARC_ADM' la función 'SARCPruebaCorreo.do'(SARC_112)
+Hay que añadir al rol 'SARC_ADM' la función 'estructura2.do'(SARC_122)
+Hay que añadir al rol 'SARC_ADM' la función de menú 'LOPD.do'(SARC_123_01)
+Hay que añadir al rol 'SARC_ADM' la función de menú 'Usuarios.do'(SARC_123_02)
+Hay que añadir al rol 'SARC_ADM' la función de menú 'SARCCargosJac.do?accion=listado'(SARC_53_01)
+Hay que añadir al rol 'SARC_GES' la función de menú 'SARCRevertirEstadoDetalle.do?accion=gestion'(SARC_10_07)
+Hay que añadir al rol 'SARC_GES' la función de menú 'SARCFirmarNotificaciones.do?accion=listado'(SARC_10_11)
+Hay que añadir al rol 'SARC_GES' la función de menú 'SARCDocumentoFirmado.do?accion=listadoFirmados'(SARC_10_12)
+Hay que añadir al rol 'SARC_GES' la función 'SARCInformes.do'(SARC_111)
+Hay que añadir al rol 'SARC_GES' la función 'SARCNotificaciones.do'(SARC_56)
+Hay que añadir al rol 'SARC_GES' la función 'SARCRevertirEstadoBuscar.do'(SARC_90)
+Hay que añadir al rol 'SARC_GES' la función 'SARCRevertirEstado.do'(SARC_91)
+Hay que añadir al rol 'SARC_GES' la función 'SARCModRepresentante.do'(SARC_93)
+Hay que añadir al rol 'SARC_GES' la función 'SARCNotificaciones.do'(SARC_96)
+---------Roles que sobran-----------------
+
+---------asignaciones que sobran-----------------
+
+Hay que borrar del rol 'SARC_ADM' la función de menú 'Log.do'(SARC_01_01)
+Hay que borrar del rol 'SARC_ADM' la función de menú 'ListaNivelLog.do'(SARC_01_02)
+Hay que borrar del rol 'SARC_ADM' la función de menú 'GestionDatos.do'(SARC_01_03)
+Hay que borrar del rol 'SARC_ADM' la función de menú 'Estructura.do?accion=descargaEstructura'(SARC_01_04)
+Hay que borrar del rol 'SARC_ADM' la función 'DescargaLog.do'(SARC_03)
+Hay que borrar del rol 'SARC_ADM' la función 'CambiaNivelLog.do'(SARC_04)
+Hay que borrar del rol 'SARC_GES' la función de menú 'SARCJacs.do?accion=alta'(SARC_05_01)
+Hay que borrar del rol 'SARC_GES' la función de menú 'SARCJacs.do?accion=listado'(SARC_05_02)
+Hay que borrar del rol 'SARC_GES' la función 'SARCModJac.do'(SARC_06)
+Hay que borrar del rol 'SARC_GES' la función 'SARCInsJac.do'(SARC_09)
+Hay que borrar del rol 'SARC_GES' la función de menú 'LOPD.do'(SARC_102_01)
+Hay que borrar del rol 'SARC_GES' la función de menú 'Usuarios.do'(SARC_102_02)
+Hay que borrar del rol 'SARC_GES' la función 'SARCModCargosJac.do'(SARC_118)
+Hay que borrar del rol 'SARC_GES' la función de menú 'SARCContDocumento.do?accion=listado'(SARC_49_01)
+Hay que borrar del rol 'SARC_GES' la función de menú 'SARCContDocumento.do?accion=alta'(SARC_49_02)
+Hay que borrar del rol 'SARC_GES' la función 'SARCModContDocumento.do'(SARC_50)
+Hay que borrar del rol 'SARC_GES' la función 'SARCInsContDocumento.do'(SARC_51)
+Hay que borrar del rol 'SARC_GES' la función de menú 'SARCMiembros.do?accion=alta'(SARC_53_01)
+Hay que borrar del rol 'SARC_GES' la función de menú 'SARCMiembros.do?accion=listado'(SARC_53_02)
+Hay que borrar del rol 'SARC_GES' la función 'SARCInsMiembro.do'(SARC_54)
+Hay que borrar del rol 'SARC_GES' la función 'SARCModMiembro.do'(SARC_55)
+Hay que borrar del rol 'SARC_GES' la función de menú 'SARCCargosJac.do?accion=listado'(SARC_56)
+Hay que borrar del rol 'SARC_GES' la función 'SARCInsAsocConsum.do'(SARC_59)
+Hay que borrar del rol 'SARC_GES' la función 'SARCModAsocConsum.do'(SARC_60)
+Hay que borrar del rol 'SARC_GES' la función de menú 'SARCAsocConsum.do?accion=alta'(SARC_65_01)
+Hay que borrar del rol 'SARC_GES' la función de menú 'SARCAsocConsum.do?accion=listado'(SARC_65_02)
+Hay que borrar del rol 'SARC_GES' la función de menú 'SARCAsocEmpr.do?accion=alta'(SARC_65_03)
+Hay que borrar del rol 'SARC_GES' la función de menú 'SARCAsocEmpr.do?accion=listado'(SARC_65_04)
+Hay que borrar del rol 'SARC_GES' la función 'SARCInsAsocEmpr.do'(SARC_66)
+Hay que borrar del rol 'SARC_GES' la función 'SARCModAsocEmpr.do'(SARC_67)

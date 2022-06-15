@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<aplicacion c_aplicacion_id="EMRA" d_aplicacion="Empresas con Riesgo por Amianto">
+<paramAplicacion><!-- Valores de los PARAMETROS de aplicacion  -->
+<parametro c_parametro="C_PROV" d_parametro="Provincia del usuario" d_comentario="" d_valor="00" />
+<parametro c_parametro="CORREO_EXTERNO_ACTIVO" d_parametro="Correo a direcciones externas" d_comentario="" d_valor="S" />
+<parametro c_parametro="PROVINCIA_LIBRE" d_parametro="Indica si se pueden hacer altas de empresas desde la OTT de una provincia distinta" d_comentario="" d_valor="S" />
+<parametro c_parametro="A_LNZD_TIPO" d_parametro="Tipo de Aplicación para 'Lanzadera de Aplicaciones'" d_comentario="" d_valor="J2EE" />
+<parametro c_parametro="A_LNZD_PTO" d_parametro="Punto de partida" d_comentario="" d_valor="PaginaInicio.do" />
+<parametro c_parametro="IAPA_PARAM_PLAN_FORMULARIO_NUMERO" d_parametro="..." d_comentario="" d_valor="2193" />
+<parametro c_parametro="PWD_SCEE" d_parametro="..." d_comentario="" d_valor="emra10" />
+<parametro c_parametro="ID_SCEE" d_parametro="Id de usuario de SCEE" d_comentario="" d_valor="EMRA" />
+<parametro c_parametro="CORREO_DIR_ORIGEN_EXT" d_parametro="Dirección de correo de origen para correos externos" d_comentario="" d_valor="desarrollo_emra_ext@jcyl.es" />
+<parametro c_parametro="USUARIO_EXTERNO_CERTIFICADO_NOMBRE" d_parametro="Nombre del usuario al que se asocian las personas que entran con certificado" d_comentario="" d_valor="EMRA_TMT" />
+<parametro c_parametro="USUARIO_EXTERNO_CERTIFICADO_PASS" d_parametro="Contraseña del usuario al que se asocian las personas que entran con certificado" d_comentario="" d_valor="EMRA_TMT" />
+<parametro c_parametro="USUARIO_EXTERNO_PUBLICO_NOMBRE" d_parametro="Nombre del usuario al que se asocian las personas que entran sin validación" d_comentario="" d_valor="EMRA_PUB" />
+<parametro c_parametro="USUARIO_EXTERNO_PUBLICO_PASS" d_parametro="Contraseña del usuario al que se asocian las personas que entran sin validaci´pon" d_comentario="" d_valor="EMRA_PUB" />
+<parametro c_parametro="DESTINO_TMT" d_parametro="Códigos de destinos" d_comentario="No quiten la última coma" d_valor="05-00000158,09-00000183,24-00000213,34-00000240,37-00000263,40-00000288,42-00000311,47-00000334,49-00000359," />
+<parametro c_parametro="A_LNZD_SSL" d_parametro="Para acceso a toda la aplicación por HTTPS" d_comentario="" d_valor="SI" />
+<parametro c_parametro="REINTENTOS_POR_DEFECTO" d_parametro="..." d_comentario="" d_valor="20" />
+<parametro c_parametro="USUARIO_INSPECTOR_CERTIFICADO_NOMBRE" d_parametro="usuario para la entrada de inspectores a la aplicación" d_comentario="" d_valor="emra_insp" />
+<parametro c_parametro="USUARIO_INSPECTOR_CERTIFICADO_PASS" d_parametro="pASS DEL INSPECTOR" d_comentario="" d_valor="emra_insp" />
+<parametro c_parametro="PLANIFICADOR.TAREA.EMRAPortafPlanif.CRON" d_parametro="..." d_comentario="" d_valor="0 0/1 * * * ?" />
+<parametro c_parametro="PLANIFICADOR.TAREA.EMRAPortafPlanif.PARAM.ACTIVO" d_parametro="..." d_comentario="" d_valor="N" />
+<parametro c_parametro="SQLWEB_ROL" d_parametro="..." d_comentario="" d_valor="EMRA_ADM" />
+<parametro c_parametro="RS_HOST_SERVER" d_parametro="Sólo para que Oracle Reports funcione desde local" d_comentario="" d_valor="http://desservicios3.jcyl.es/emra/reports" />
+<parametro c_parametro="AUTENTIFICACION_CERTIFICADO_URL_ERROR" d_parametro="..." d_comentario="" d_valor="loginCertificado.jsp" />
+<parametro c_parametro="AUTENTIFICACION_CERTIFICADO_URL_EXITO" d_parametro="..." d_comentario="" d_valor="EMRAAccesoCert.jsp" />
+<parametro c_parametro="AUTENTIFICACION_CERTIFICADO_TRIPLE_DES" d_parametro="..." d_comentario="" d_valor="000000000000000000000000000000000000000000000000" />
+<parametro c_parametro="USUARIO_EXTERNO_CERTIFICADO_ROL" d_parametro="Rol de los usuarios con certificado" d_comentario="" d_valor="EMRA_TMT" />
+<parametro c_parametro="PLANIFICADOR.TAREA.CACTEliminacionTemporalesPlanif.CRON" d_parametro="..." d_comentario="" d_valor="0 0/1 * * * ?" />
+<parametro c_parametro="PLANIFICADOR.TAREA.EMRAEliminacionTemporalesPlanif.CRON" d_parametro="...." d_comentario="" d_valor="0 0/1 * * * ?" />
+</paramAplicacion>
+<usuarios><!--  Relacion de USUARIOS definidos con acceso a la aplicacion. -->
+<usuario c_usr_id="estgarca" a_password="{MD5}ooCuXVG1uz82PEB4qXTG+g==" d_nom="Carlos M." d_apell="Esteban García" d_seguridad="" c_dni="09328484" c_nif="Y" c_unidad_id="" c_correo="" b_activo="S" />
+<usuario c_usr_id="emra_insp" a_password="{MD5}MGmPvNW6+gHQpDnfC/AvtA==" d_nom="Inspector" d_apell="de trabajo" d_seguridad="" c_dni="" c_nif="" c_unidad_id="" c_correo="" b_activo="S" />
+<usuario c_usr_id="emrabu" a_password="{MD5}HGAaYmNxUe6kxRAOr1DuxA==" d_nom="Burgos" d_apell="Usuario de EMRA" d_seguridad="" c_dni="" c_nif="" c_unidad_id="" c_correo="" b_activo="S" />
+<usuario c_usr_id="EMRA_PUB" a_password="{MD5}a3nsCRPRIP1LKyYDU8KEgg==" d_nom="Usuario público" d_apell="EMRA" d_seguridad="" c_dni="" c_nif="" c_unidad_id="" c_correo="" b_activo="S" />
+<usuario c_usr_id="sedalona" a_password="{MD5}fUUd6RCl98DKg/zeu0F6Hg==" d_nom="natalia" d_apell="sedano alonso" d_seguridad="" c_dni="13155977" c_nif="T" c_unidad_id="" c_correo="" b_activo="S" />
+<usuario c_usr_id="EMRA_TMT" a_password="{MD5}bShEYVYTJMsZ6xSHjSRglQ==" d_nom="Usuario" d_apell="telemático" d_seguridad="" c_dni="" c_nif="" c_unidad_id="" c_correo="" b_activo="S" />
+<usuario c_usr_id="pozgarra" a_password="{MD5}wUXSnzH3ix1qVwRTcuTt/A==" d_nom="Raquel" d_apell="del Pozo Garrote" d_seguridad="" c_dni="" c_nif="" c_unidad_id="" c_correo="" b_activo="S" />
+</usuarios>
+<paramUsuarios><!-- Valores de los PARAMETROS de Usuario  -->
+<parametro c_parametro="C_PROV" c_usr_id="emra_insp" d_valor="24" />
+<parametro c_parametro="C_PROV" c_usr_id="emrabu" d_valor="09" />
+</paramUsuarios>
+<roles><!--  Relacion de GRUPOS USUARIOS usados en la aplicacion. -->
+<rol c_grupo_id="EMRA_TMT" d_grupo="Usuarios telemáticos de EMRA" />
+<rol c_grupo_id="EMRA_GES" d_grupo="Gestores de EMRA" />
+<rol c_grupo_id="EMRA_PUB" d_grupo="Usuario público anónimo de EMRA" />
+<rol c_grupo_id="EMRA_GESP" d_grupo="Gestor principal de EMRA" />
+<rol c_grupo_id="EMRA_ADM" d_grupo="Administradores de EMRA" />
+<rol c_grupo_id="EMRA_INSP" d_grupo="Inspectores de Trabajo para EMRA" />
+</roles>
+<usuariosRoles><!-- Asociación de USUARIOS a GRUPOS o Roles-->
+<asignacion c_usr_id="estgarca" c_grupo_id="EMRA_ADM" b_borrado="N"/>
+<asignacion c_usr_id="sedalona" c_grupo_id="EMRA_ADM" b_borrado="N"/>
+<asignacion c_usr_id="emrabu" c_grupo_id="EMRA_GES" b_borrado="N"/>
+<asignacion c_usr_id="EMRA_TMT" c_grupo_id="EMRA_TMT" b_borrado="N"/>
+<asignacion c_usr_id="EMRA_PUB" c_grupo_id="EMRA_PUB" b_borrado="N"/>
+<asignacion c_usr_id="pozgarra" c_grupo_id="EMRA_ADM" b_borrado="N"/>
+<asignacion c_usr_id="emra_insp" c_grupo_id="EMRA_INSP" b_borrado="N"/>
+</usuariosRoles>
+<funciones><!-- Relacion de FUNCIONES que ha de tener nuestra aplicacion -->
+<funcion c_funcion_id="EMRA_26" d_descripcion="Registro Público" d_proceso="RegistroPublico.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_25_02" d_descripcion="Variación" d_proceso="BusquedaSolicitud.do?accion=buscar&origen=Variacion&nuevaConsulta=SI" d_nombre=""/>
+<funcion c_funcion_id="EMRA_25_03" d_descripcion="Baja" d_proceso="BusquedaSolicitud.do?accion=buscar&origen=Baja&nuevaConsulta=SI" d_nombre=""/>
+<funcion c_funcion_id="EMRA_08_04" d_descripcion="Baja" d_proceso="EMRABajaTMTTMT.do?accion=alta" d_nombre=""/>
+<funcion c_funcion_id="EMRA_12" d_descripcion="Solicitud TMT" d_proceso="SolicitudTMT.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_37" d_descripcion="Estadística total" d_proceso="EstadisticaTotal.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_38" d_descripcion="Estadística total" d_proceso="EstadisticaTotal.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_46_01" d_descripcion="Clasificación de datos" d_proceso="LOPD.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_48" d_descripcion="Listados" d_proceso="Listado.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_31_05" d_descripcion="Listados" d_proceso="GestionListado.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_51" d_descripcion="Inspecciones de trabajo" d_proceso="NOAUInspeccion.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_42" d_descripcion="Documentos Provincia" d_proceso="DocumentoProv.do" d_nombre="DocumentoProv"/>
+<funcion c_funcion_id="EMRA_43" d_descripcion="Informes" d_proceso="EMRAInformes.do" d_nombre="EMRAInformes"/>
+<funcion c_funcion_id="EMRA_28_03" d_descripcion="Lanzar comprobación Portafirmas" d_proceso="EMRAPortafirmas.do?accion=lanzarPortafirmas" d_nombre=""/>
+<funcion c_funcion_id="EMRA_24_04" d_descripcion="Asignación Técnico" d_proceso="EMRAPlanAsignacionTecnico.do?accion=gestion" d_nombre=""/>
+<funcion c_funcion_id="EMRA_24_03" d_descripcion="Documentos" d_proceso="EMRAPlanDocumentos.do?accion=gestion" d_nombre=""/>
+<funcion c_funcion_id="EMRA_63" d_descripcion="CACTTecnico" d_proceso="CACTTecnico.do" d_nombre="CACTTecnico"/>
+<funcion c_funcion_id="EMRA_19" d_descripcion="Requisitos mínimos" d_proceso="RequisitosMinimos.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_15_01" d_descripcion="Clasificación de datos" d_proceso="LOPD.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_13" d_descripcion="Mis trámites" d_proceso="TramitesTMT.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_20" d_descripcion="Trámites ventanilla" d_proceso="" d_nombre=""/>
+<funcion c_funcion_id="EMRA_06" d_descripcion="Cambia nivel log" d_proceso="CambiaNivelLog.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_08" d_descripcion="Solicitudes registro" d_proceso="" d_nombre=""/>
+<funcion c_funcion_id="EMRA_33" d_descripcion="Manual de usuario OTT" d_proceso="ManualOTT.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_45_01" d_descripcion="Firmas" d_proceso="EMRAFirmas.do?accion=listar" d_nombre=""/>
+<funcion c_funcion_id="EMRA_05_05" d_descripcion="Actualizaciones" d_proceso="EMRABdUtil.do?accion=seleccionar&modo=sql" d_nombre=""/>
+<funcion c_funcion_id="EMRA_20_06" d_descripcion="Bajas telemáticas" d_proceso="EMRABajaTMT.do?accion=gestion" d_nombre=""/>
+<funcion c_funcion_id="EMRA_64" d_descripcion="Anexos de Solicitudes" d_proceso="EMRASolicitudAnexo.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_57" d_descripcion="Pasarela Documental" d_proceso="EMRAPlanAnexo.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_20_01" d_descripcion="Inscripción" d_proceso="InsertarSolicitud.do?accion=alta" d_nombre=""/>
+<funcion c_funcion_id="EMRA_05_01" d_descripcion="Listado" d_proceso="Log.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_08_01" d_descripcion="Inscripción" d_proceso="EMRASolicitudTMTTMT.do?accion=alta" d_nombre=""/>
+<funcion c_funcion_id="EMRA_32_02" d_descripcion="Estadísticas" d_proceso="BuscarEstadisticas.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_47" d_descripcion="Listados" d_proceso="Listado.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_50" d_descripcion="Servicios Territoriales de Sanidad" d_proceso="EMRASTSanidad.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_05_04" d_descripcion="Estructura" d_proceso="Estructura.do?accion=descargaEstructura" d_nombre=""/>
+<funcion c_funcion_id="EMRA_21" d_descripcion="Descarga SCGD" d_proceso="EMRASCGD.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_22" d_descripcion="Trabajos" d_proceso="" d_nombre=""/>
+<funcion c_funcion_id="EMRA_08_05" d_descripcion="Mis solicitudes" d_proceso="EMRASolicitudTMTTMT.do?accion=gestion" d_nombre=""/>
+<funcion c_funcion_id="EMRA_24_05" d_descripcion="Solicitud de AnexoIV" d_proceso="EMRASolicitudAnexoIV.do?accion=gestion" d_nombre=""/>
+<funcion c_funcion_id="EMRA_00" d_descripcion="Solicitudes" d_proceso="Solicitud.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_14" d_descripcion="Firma de documentos telemáticos" d_proceso="EMRAFirmaTMT.do" d_nombre="EMRAFirmaTMT"/>
+<funcion c_funcion_id="EMRA_25" d_descripcion="Trámites ventanilla" d_proceso="" d_nombre=""/>
+<funcion c_funcion_id="EMRA_31" d_descripcion="Gestión y estadísticas" d_proceso="" d_nombre=""/>
+<funcion c_funcion_id="EMRA_16" d_descripcion="Baja de solicitud" d_proceso="Baja.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_32" d_descripcion="Gestión y estadísticas" d_proceso="" d_nombre=""/>
+<funcion c_funcion_id="EMRA_35" d_descripcion="Estadística anual" d_proceso="EstadisticaAnual.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_46_02" d_descripcion="Usuarios con acceso" d_proceso="Usuarios.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_41" d_descripcion="Documentos provincia" d_proceso="DocumentoProv.do" d_nombre="DocumentoProv"/>
+<funcion c_funcion_id="EMRA_05_03" d_descripcion="Exportar" d_proceso="GestionDatos.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_01" d_descripcion="Anexos" d_proceso="EMRAPlanAnexo.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_27" d_descripcion="Trabajos" d_proceso="" d_nombre=""/>
+<funcion c_funcion_id="EMRA_27_01" d_descripcion="Alta" d_proceso="EMRATrabajosTMTTMT.do?accion=alta" d_nombre=""/>
+<funcion c_funcion_id="EMRA_30" d_descripcion="Anexos de inicio de trabajos" d_proceso="EMRATrabajosAnexo.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_28" d_descripcion="Gestión portafirmas" d_proceso="" d_nombre=""/>
+<funcion c_funcion_id="EMRA_28_04" d_descripcion="Lanzar comprobación notificaciones" d_proceso="EMRAPortafirmas.do?accion=lanzarNotificaciones" d_nombre=""/>
+<funcion c_funcion_id="EMRA_65" d_descripcion="Anexos" d_proceso="EMRASCGD.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_67" d_descripcion="Anexos de Baja" d_proceso="EMRABajaAnexo.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_69" d_descripcion="SQLWeb" d_proceso="sqlw" d_nombre=""/>
+<funcion c_funcion_id="EMRA_68" d_descripcion="Anexos de Plan" d_proceso="EMRAPlanAnexo.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_05_07" d_descripcion="Generar DDL" d_proceso="EMRADDL.do?accion=generarDDL" d_nombre=""/>
+<funcion c_funcion_id="EMRA_59" d_descripcion="Consulta de planes" d_proceso="EMRAPlanInsp.do?accion=gestion" d_nombre=""/>
+<funcion c_funcion_id="EMRA_15_02" d_descripcion="Usuarios con acceso" d_proceso="Usuarios.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_46" d_descripcion="Seguridad de la información" d_proceso="" d_nombre=""/>
+<funcion c_funcion_id="EMRA_56" d_descripcion="SolicitudTMT" d_proceso="SolicitudTMT.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_31_01" d_descripcion="Gestión" d_proceso="Tramites.do?accion=gestion&nuevaConsulta=SI" d_nombre=""/>
+<funcion c_funcion_id="EMRA_05" d_descripcion="Administración" d_proceso="" d_nombre=""/>
+<funcion c_funcion_id="EMRA_17" d_descripcion="Variacion TMT" d_proceso="VariacionTMT.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_04" d_descripcion="Estadística rango fechas" d_proceso="EstadisticaRangoFechas.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_53" d_descripcion="Estadística por fecha" d_proceso="EstadisticaFecha.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_32_03" d_descripcion="Documentos" d_proceso="BuscarDocumentos.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_39_02" d_descripcion="Direcciones" d_proceso="EMRADirecciones.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_09_01" d_descripcion="Alta" d_proceso="EMRAPlanTMTTMT.do?accion=alta" d_nombre=""/>
+<funcion c_funcion_id="EMRA_58" d_descripcion="Descarga SCGD" d_proceso="EMRASCGD.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_22_01" d_descripcion="Gestión" d_proceso="EMRATrabajos.do?accion=gestion" d_nombre=""/>
+<funcion c_funcion_id="EMRA_60" d_descripcion="Generar informe" d_proceso="EMRAGenerarInforme.do?accion=generarPDF" d_nombre=""/>
+<funcion c_funcion_id="EMRA_20_04" d_descripcion="Solicitudes telemáticas" d_proceso="EMRASolicitudTMT.do?accion=gestion" d_nombre=""/>
+<funcion c_funcion_id="EMRA_66" d_descripcion="Variación Anexos" d_proceso="EMRAVariacionAnexo.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_61" d_descripcion="ASOPDirCentrosDir" d_proceso="ASOPDirCentrosDir.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_09_03" d_descripcion="Borrame" d_proceso="EMRAPlanTMTTMT.do?accion=borrame" d_nombre=""/>
+<funcion c_funcion_id="EMRA_05_08" d_descripcion="Eliminar Ficheros Temporales" d_proceso="EMRAEliminacionTemporales.do?accion=lanzarEliminacionTemporales" d_nombre=""/>
+<funcion c_funcion_id="EMRA_15" d_descripcion="Seguridad de la información" d_proceso="" d_nombre=""/>
+<funcion c_funcion_id="EMRA_55" d_descripcion="Tramites" d_proceso="Tramite.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_02" d_descripcion="Variaciones" d_proceso="Variacion.do" d_nombre="Variacion"/>
+<funcion c_funcion_id="EMRA_07" d_descripcion="Descarga Log" d_proceso="DescargaLog.do" d_nombre="DescargaLog"/>
+<funcion c_funcion_id="EMRA_11" d_descripcion="Inicializacion" d_proceso="EMRAInicializacion.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_03" d_descripcion="Insertar variación" d_proceso="InsertarVariacionTMT.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_20_02" d_descripcion="Variación" d_proceso="BusquedaSolicitud.do?accion=buscar&origen=Variacion&nuevaConsulta=SI" d_nombre=""/>
+<funcion c_funcion_id="EMRA_20_03" d_descripcion="Baja" d_proceso="BusquedaSolicitud.do?accion=buscar&origen=Baja&nuevaConsulta=SI" d_nombre=""/>
+<funcion c_funcion_id="EMRA_32_01" d_descripcion="Gestión" d_proceso="Tramites.do?accion=gestion&nuevaConsulta=SI" d_nombre=""/>
+<funcion c_funcion_id="EMRA_31_04" d_descripcion="Listados" d_proceso="GestionListado.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_52" d_descripcion="Estadística por fecha" d_proceso="EstadisticaFecha.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_31_03" d_descripcion="Documentos" d_proceso="BuscarDocumentos.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_28_01" d_descripcion="Gestión portafirmas" d_proceso="EMRAPortafirmas.do?accion=gestion" d_nombre=""/>
+<funcion c_funcion_id="EMRA_62" d_descripcion="AutoridadLaboral" d_proceso="EMRAAutoridadLaboral.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_71" d_descripcion="Envíos" d_proceso="EMRAEnvio.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_39_03" d_descripcion="Técnico" d_proceso="CACTTecnico.do?accion=buscar" d_nombre="CACTTecnico"/>
+<funcion c_funcion_id="EMRA_18" d_descripcion="Punto de entrada con certificado" d_proceso="LoginCert.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_23" d_descripcion="Insertar variación" d_proceso="InsertarVariacion.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_10" d_descripcion="Inicializacion" d_proceso="EMRAInicializacion.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_39_04" d_descripcion="Firma del Jefe de Servicio de Prevencion de Riesgos Laborales" d_proceso="EMRAFirmas.do?accion=detalleFirmaJSPRL" d_nombre="detalleFirmaJSPRL"/>
+<funcion c_funcion_id="EMRA_34" d_descripcion="Estadística por rango de fechas" d_proceso="EstadisticaRangoFechas.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_36" d_descripcion="Estadística anual" d_proceso="EstadisticaAnual.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_32_04" d_descripcion="Listados" d_proceso="GestionListado.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_49" d_descripcion="Listados" d_proceso="Listado.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_39" d_descripcion="Mantenimiento" d_proceso="" d_nombre=""/>
+<funcion c_funcion_id="EMRA_39_01" d_descripcion="Firmas" d_proceso="EMRAFirmas.do?accion=listar" d_nombre=""/>
+<funcion c_funcion_id="EMRA_40" d_descripcion="Informes" d_proceso="EMRAInformes.do" d_nombre="EMRAInformes"/>
+<funcion c_funcion_id="EMRA_45" d_descripcion="Mantenimiento" d_proceso="" d_nombre=""/>
+<funcion c_funcion_id="EMRA_09" d_descripcion="Planes" d_proceso="EMRAPlanTMTTMT.do?accion=gestion" d_nombre=""/>
+<funcion c_funcion_id="EMRA_27_02" d_descripcion="Mis trabajos" d_proceso="EMRATrabajosTMTTMT.do?accion=gestion" d_nombre=""/>
+<funcion c_funcion_id="EMRA_70" d_descripcion="EMRASolicitudAnexoIV" d_proceso="EMRASolicitudAnexoIV.do" d_nombre="EMRASolicitudAnexoIV"/>
+<funcion c_funcion_id="EMRA_22_02" d_descripcion="Trabajos telemáticos" d_proceso="EMRATrabajosTMT.do?accion=gestion" d_nombre=""/>
+<funcion c_funcion_id="EMRA_05_06" d_descripcion="Estructura PRUEBAS" d_proceso="EstructuraPRUEBA.do?accion=descargaEstructura" d_nombre=""/>
+<funcion c_funcion_id="EMRA_20_05" d_descripcion="Variaciones telemáticas" d_proceso="EMRAVariacionTMT.do?accion=gestion" d_nombre=""/>
+<funcion c_funcion_id="EMRA_08_02" d_descripcion="Variación" d_proceso="EMRAVariacionTMTTMT.do?accion=alta" d_nombre=""/>
+<funcion c_funcion_id="EMRA_25_01" d_descripcion="Inscripción" d_proceso="InsertarSolicitud.do?accion=alta" d_nombre=""/>
+<funcion c_funcion_id="EMRA_31_02" d_descripcion="Estadísticas" d_proceso="BuscarEstadisticas.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_05_02" d_descripcion="Cambio" d_proceso="ListaNivelLog.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_54" d_descripcion="Estadística por fecha" d_proceso="EstadisticaFecha.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_44" d_descripcion="Exportar datos" d_proceso="ExportarDatos.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_09_02" d_descripcion="Mis planes" d_proceso="EMRAPlanTMTTMT.do?accion=gestion" d_nombre=""/>
+<funcion c_funcion_id="EMRA_24" d_descripcion="Planes" d_proceso="" d_nombre=""/>
+<funcion c_funcion_id="EMRA_24_02" d_descripcion="Gestión" d_proceso="EMRAPlan.do?accion=gestion" d_nombre=""/>
+<funcion c_funcion_id="EMRA_29" d_descripcion="Pasarela Firma" d_proceso="EMRAPasarelaFirma.do" d_nombre=""/>
+<funcion c_funcion_id="EMRA_28_02" d_descripcion="Parar pendientes" d_proceso="EMRAPortafirmas.do?accion=estadisticasPendientes" d_nombre=""/>
+</funciones>
+<tipoMenus><!-- Relacion de TIPOS DE MENÚ por defecto. --><tipo c_menu_id="S" d_menu="Menu textual superior por defecto"/><tipo c_menu_id="N" d_menu="Opciones de pantalla,sin botonera"/></tipoMenus>
+<rolesFunciones><!-- Relacion de FUNCIONES que ha de tener nuestra aplicacion -->
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_55" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_TMT" c_funcion_id="EMRA_11" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_TMT" c_funcion_id="EMRA_12" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_TMT" c_funcion_id="EMRA_03" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_TMT" c_funcion_id="EMRA_14" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_10" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_02" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_05" n_orden="7" n_profundidad="1" c_menu_id="S" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_05_01" n_orden="1" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_05"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_05_02" n_orden="2" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_05"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_06" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_07" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_TMT" c_funcion_id="EMRA_08" n_orden="2" n_profundidad="1" c_menu_id="S" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_TMT" c_funcion_id="EMRA_08_01" n_orden="1" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_08"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_TMT" c_funcion_id="EMRA_08_04" n_orden="4" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_08"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_16" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_TMT" c_funcion_id="EMRA_17" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_TMT" c_funcion_id="EMRA_56" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GES" c_funcion_id="EMRA_10" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GES" c_funcion_id="EMRA_02" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GES" c_funcion_id="EMRA_16" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GES" c_funcion_id="EMRA_23" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GES" c_funcion_id="EMRA_00" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_TMT" c_funcion_id="EMRA_13" n_orden="1" n_profundidad="1" c_menu_id="S" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_TMT" c_funcion_id="EMRA_08_02" n_orden="3" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_08"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GES" c_funcion_id="EMRA_25" n_orden="1" n_profundidad="1" c_menu_id="S" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GES" c_funcion_id="EMRA_25_01" n_orden="1" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_25"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GES" c_funcion_id="EMRA_25_02" n_orden="2" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_25"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GES" c_funcion_id="EMRA_25_03" n_orden="3" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_25"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GES" c_funcion_id="EMRA_31" n_orden="2" n_profundidad="1" c_menu_id="S" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GES" c_funcion_id="EMRA_31_01" n_orden="1" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_31"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GES" c_funcion_id="EMRA_31_02" n_orden="2" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_31"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_20" n_orden="1" n_profundidad="1" c_menu_id="S" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_20_01" n_orden="1" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_20"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_20_02" n_orden="2" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_20"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_20_03" n_orden="3" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_20"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_32" n_orden="2" n_profundidad="1" c_menu_id="S" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_32_01" n_orden="1" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_32"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_32_02" n_orden="2" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_32"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GES" c_funcion_id="EMRA_33" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_34" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_35" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GES" c_funcion_id="EMRA_04" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GES" c_funcion_id="EMRA_36" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_37" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GES" c_funcion_id="EMRA_38" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_TMT" c_funcion_id="EMRA_18" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_TMT" c_funcion_id="EMRA_19" n_orden="5" n_profundidad="1" c_menu_id="S" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_23" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_00" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_PUB" c_funcion_id="EMRA_26" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_39" n_orden="5" n_profundidad="1" c_menu_id="S" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_39_01" n_orden="1" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_39"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_40" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_32_03" n_orden="3" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_32"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_41" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GES" c_funcion_id="EMRA_31_03" n_orden="3" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_31"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GES" c_funcion_id="EMRA_42" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GES" c_funcion_id="EMRA_43" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_39_02" n_orden="2" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_39"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_05_03" n_orden="3" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_05"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_05_04" n_orden="4" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_05"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_44" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GES" c_funcion_id="EMRA_45" n_orden="3" n_profundidad="1" c_menu_id="S" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GES" c_funcion_id="EMRA_45_01" n_orden="1" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_45"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_50" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_51" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_52" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GES" c_funcion_id="EMRA_53" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GESP" c_funcion_id="EMRA_54" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_15" n_orden="6" n_profundidad="1" c_menu_id="S" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_15_01" n_orden="1" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_15"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_15_02" n_orden="2" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_15"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GESP" c_funcion_id="EMRA_25" n_orden="1" n_profundidad="1" c_menu_id="S" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GESP" c_funcion_id="EMRA_25_01" n_orden="1" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_25"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GESP" c_funcion_id="EMRA_25_02" n_orden="2" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_25"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GESP" c_funcion_id="EMRA_25_03" n_orden="3" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_25"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GESP" c_funcion_id="EMRA_31" n_orden="2" n_profundidad="1" c_menu_id="S" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GESP" c_funcion_id="EMRA_31_01" n_orden="1" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_31"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GESP" c_funcion_id="EMRA_31_02" n_orden="2" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_31"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GESP" c_funcion_id="EMRA_31_03" n_orden="3" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_31"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GESP" c_funcion_id="EMRA_45" n_orden="3" n_profundidad="1" c_menu_id="S" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GESP" c_funcion_id="EMRA_45_01" n_orden="1" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_45"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GESP" c_funcion_id="EMRA_46" n_orden="4" n_profundidad="1" c_menu_id="S" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GESP" c_funcion_id="EMRA_46_01" n_orden="1" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_46"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GESP" c_funcion_id="EMRA_46_02" n_orden="2" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_46"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GESP" c_funcion_id="EMRA_10" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GESP" c_funcion_id="EMRA_02" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GESP" c_funcion_id="EMRA_16" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GESP" c_funcion_id="EMRA_23" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GESP" c_funcion_id="EMRA_00" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GESP" c_funcion_id="EMRA_33" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GESP" c_funcion_id="EMRA_04" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GESP" c_funcion_id="EMRA_36" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GESP" c_funcion_id="EMRA_38" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GESP" c_funcion_id="EMRA_42" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GESP" c_funcion_id="EMRA_43" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_32_04" n_orden="4" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_32"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_47" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GES" c_funcion_id="EMRA_31_04" n_orden="4" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_31"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GES" c_funcion_id="EMRA_48" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GESP" c_funcion_id="EMRA_31_05" n_orden="4" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_31"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_GESP" c_funcion_id="EMRA_49" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_TMT" c_funcion_id="EMRA_30" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_TMT" c_funcion_id="EMRA_64" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_28_01" n_orden="1" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_28"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_28" n_orden="8" n_profundidad="1" c_menu_id="S" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_28_02" n_orden="2" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_28"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_28_03" n_orden="3" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_28"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_28_04" n_orden="4" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_28"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_TMT" c_funcion_id="EMRA_58" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_05_07" n_orden="7" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_05"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_24_02" n_orden="1" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_24"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_05_05" n_orden="5" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_05"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_05_06" n_orden="6" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_05"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_24_03" n_orden="2" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_24"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_61" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_62" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_39_03" n_orden="3" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_39"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_24_04" n_orden="3" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_24"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_TMT" c_funcion_id="EMRA_09_03" n_orden="3" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_09"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_20_04" n_orden="4" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_20"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_20_05" n_orden="5" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_20"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_TMT" c_funcion_id="EMRA_09" n_orden="3" n_profundidad="1" c_menu_id="S" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_TMT" c_funcion_id="EMRA_09_01" n_orden="1" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_09"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_TMT" c_funcion_id="EMRA_01" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_TMT" c_funcion_id="EMRA_09_02" n_orden="2" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_09"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_24" n_orden="3" n_profundidad="1" c_menu_id="S" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_TMT" c_funcion_id="EMRA_27" n_orden="4" n_profundidad="1" c_menu_id="S" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_TMT" c_funcion_id="EMRA_27_01" n_orden="1" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_27"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_TMT" c_funcion_id="EMRA_27_02" n_orden="2" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_27"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_TMT" c_funcion_id="EMRA_29" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_21" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_22" n_orden="4" n_profundidad="1" c_menu_id="S" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_22_01" n_orden="1" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_22"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_22_02" n_orden="2" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_22"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_70" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_57" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_INSP" c_funcion_id="EMRA_59" n_orden="1" n_profundidad="1" c_menu_id="S" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_60" n_orden="9" n_profundidad="1" c_menu_id="S" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_63" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_TMT" c_funcion_id="EMRA_08_05" n_orden="2" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_08"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_20_06" n_orden="6" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_20"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_INSP" c_funcion_id="EMRA_65" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_71" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_TMT" c_funcion_id="EMRA_66" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_TMT" c_funcion_id="EMRA_67" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_69" n_orden="10" n_profundidad="1" c_menu_id="S" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_39_04" n_orden="4" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_39"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_INSP" c_funcion_id="EMRA_68" n_orden="0" n_profundidad="0" c_menu_id="N" c_funcion_padre="0"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_24_05" n_orden="4" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_24"  b_borrado="N"/>
+<asignacion c_grupo_id="EMRA_ADM" c_funcion_id="EMRA_05_08" n_orden="8" n_profundidad="2" c_menu_id="S" c_funcion_padre="EMRA_05"  b_borrado="N"/>
+</rolesFunciones>
+</aplicacion>

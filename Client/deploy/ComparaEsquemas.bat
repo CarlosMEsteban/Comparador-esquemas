@@ -1,0 +1,1 @@
+"C:\Archivos de programa\Java\jre1.5.0_12\bin\java" -jar ComparaEsquemas.jar

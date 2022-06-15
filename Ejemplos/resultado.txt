@@ -1,0 +1,174 @@
+---------Comenzamos BD-----------------
+
+---------Tablas-----------------
+
+Crear la tabla EMRA_ENVIO
+Crear la tabla EMRA_TIPO_ENVIO
+---------columnas-----------------
+
+Hay que cambiar la estructura de las columnas: EMRA_PLAN_ANEXO.C_DOCUMENTO_ID
+Hay que cambiar la estructura de las columnas: EMRA_PLAN_ANEXO.C_SCGD_CAT_DOC
+Hay que cambiar la estructura de las columnas: EMRA_PLAN_ANEXO.C_TIPO_ANEXO
+Hay que cambiar la estructura de las columnas: EMRA_PLAN_REC_PREVEN.C_TIPO_REC_PREVEN
+Hay que cambiar la estructura de las columnas: EMRA_TRABAJOS.N_EXP
+---------constraints-----------------
+
+Hay que crear la constraint: EMRA_AUTORIDAD_LABORAL.Constraint de sistema->"C_PROV" IS NOT NULL
+Hay que crear la constraint: EMRA_BAJA.Constraint de sistema->"C_BAJA_ID" IS NOT NULL
+Hay que crear la constraint: EMRA_BAJA_FIRMAS.FKBAFBAJ01->
+Hay que crear la constraint: EMRA_PLAN_ANEXO.Constraint de sistema->"C_TIPO_ANEXO" IS NOT NULL
+Hay que crear la constraint: EMRA_PLAN_ANEXO.Constraint de sistema->"C_DOCUMENTO_ID" IS NOT NULL
+Hay que crear la constraint: EMRA_PLAN_TECNICO.Constraint de sistema->"C_TECNICO_ID" IS NOT NULL
+Hay que crear la constraint: EMRA_PLAN_TECNICO.Constraint de sistema->"C_PLAN_ID" IS NOT NULL
+Hay que crear la constraint: EMRA_PLAN_TMT.FKPLTPLA04->
+Hay que crear la constraint: EMRA_TRABAJOS.Constraint de sistema->"N_EXP" IS NOT NULL
+Hay que borrar la constraint: BIN$1L1PnB/cF8vgUBAKIHlZIA==$0.BIN$1L1PnB/WF8vgUBAKIHlZIA==$0"A_NREGISTRO" IS NOT NULL
+Hay que borrar la constraint: BIN$1L1PnB/cF8vgUBAKIHlZIA==$0.BIN$1L1PnB/XF8vgUBAKIHlZIA==$0"C_IDDOE" IS NOT NULL
+Hay que borrar la constraint: BIN$1L1PnB/cF8vgUBAKIHlZIA==$0.BIN$1L1PnB/YF8vgUBAKIHlZIA==$0"C_PRES_ID" IS NOT NULL
+Hay que borrar la constraint: BIN$1L1PnB/cF8vgUBAKIHlZIA==$0.BIN$1L1PnB/ZF8vgUBAKIHlZIA==$0
+Hay que borrar la constraint: EMRA_ESTADOS.Constraint de sistema"C_ESTADO" IS NOT NULL
+Hay que borrar la constraint: EMRA_SOLICITUD.Constraint de sistema"C_SOLI_ID" IS NOT NULL
+Hay que borrar la constraint: EMRA_ST_SANIDAD.Constraint de sistema"C_PROV" IS NOT NULL
+Hay que borrar la constraint: EMRA_TIPOS_DOCUMENTOS.Constraint de sistema"C_TIPO" IS NOT NULL
+Hay que borrar la constraint: EMRA_TRABAJADORES.Constraint de sistema"C_TRABAJADOR_ID" IS NOT NULL
+Hay que borrar la constraint: EMRA_TRABAJOS.Constraint de sistema"C_TRABAJO_ID" IS NOT NULL
+Hay que borrar la constraint: EMRA_TRABAJOS_TMT.Constraint de sistema"C_TRABAJO_ID" IS NOT NULL
+Hay que borrar la constraint: EMRA_VARIACION.Constraint de sistema"C_VARIACION_ID" IS NOT NULL
+---------índices-----------------
+
+Hay que crear el índice: EMRA_BAJA_ANEXO.FKBAABAJ01_IDX
+Hay que crear el índice: EMRA_BAJA_ANEXO.PJBAJANE
+Hay que crear el índice: EMRA_BAJA_DOCUMENTO.FKBADBAJ01_IDX
+Hay que crear el índice: EMRA_BAJA_FIRMAS.FKBAFBAJ01_IDX
+Hay que crear el índice: EMRA_SOLICITUD_TMT.SKSTMPRE01_IDX
+Hay que crear el índice: EMRA_VARIACION.FKVARIPRES01_IDX
+Hay que crear el índice: EMRA_VARIACION_FIRMAS.PKVARTMT1
+---------triggers-----------------
+
+---------sinonimos-----------------
+
+Hay que crear el sinónimo: P_FISICAS
+Hay que crear el sinónimo: BAJA
+Hay que crear el sinónimo: BAJA_ANEXO
+Hay que crear el sinónimo: ENVIO
+Hay que crear el sinónimo: PLAN_REC_PREVEN
+Hay que crear el sinónimo: SEC_BAJA
+Hay que crear el sinónimo: SEC_PLAN_REC_PREVEN
+Hay que crear el sinónimo: SOLICITUD_ANEXO
+Hay que crear el sinónimo: TIPO_ENVIO
+Hay que crear el sinónimo: VARIACION_ANEXO
+Hay que borrar el sinonimo: PLAN_TECNICO
+---------secuencias-----------------
+
+Hay que crear la secuencia: EMRA_SEC_BAJA
+Hay que crear la secuencia: EMRA_SEC_PLAN_REC_PREVEN
+---------procedimientos-----------------
+
+Hay que crear el procedimiento: TREMRA_ESTABI
+Hay que crear el procedimiento: TREMRA_VARIBU
+Hay que crear el procedimiento: TREMRA_SOLIBI
+Hay que crear el procedimiento: TREMRA_ESTABU
+Hay que crear el procedimiento: TREMRA_TIDOBI
+Hay que crear el procedimiento: TREMRA_TIDOBU
+Hay que crear el procedimiento: TREMRA_VARIBI
+Hay que crear el procedimiento: TREMRA_STSABI
+Hay que crear el procedimiento: TREMRA_STSABU
+Hay que crear el procedimiento: TREMRA_SOLIBU
+---------vistas-----------------
+
+Hay que modificar la vista: EMRA_V_SOLI_ESTADO
+---------permisos-----------------
+
+---------parametros-----------------
+
+Hay que añadir el parámetro: SCEE_SERVIDOR_CONEXION_JRS1. Valor: servicioscee,desservicios3.jcyl.es
+Hay que añadir el parámetro: PLANIFICADOR.TAREA.EMRAPortafPlanif.CRON. Valor: 0 0/1 * * * ?
+Hay que añadir el parámetro: COMU_URL_REST. Valor: https://desservicios3.jcyl.es/come/comu
+Hay que añadir el parámetro: PLANIFICADOR.USUARIO. Valor: USR_PLANIFICADOR
+Hay que añadir el parámetro: SCGD_SERVIDOR_CONEXION. Valor: servicioscee
+Hay que añadir el parámetro: SCPE_URL_REST. Valor: https://desservicios3.jcyl.es/scre/scpe
+Hay que añadir el parámetro: TOKI_VISUALIZACION. Valor: ROJO
+Hay que añadir el parámetro: JSON_JCYL_PROV_UNIDAD_ORGANICA_DTS. Valor: {cp: {00: 00000334, 05: 00000158, 09: 00000183, 24: 00000213, 34: 00000240, 37: 00000263, 40: 00000288, 42: 00000311, 47: 00000334, 49: 00000359}, d: 'Delegación Territorial'}
+Hay que añadir el parámetro: SCPR_URL_REST. Valor: https://desservicios3.jcyl.es/scre/scpr
+Hay que añadir el parámetro: SCGD_USUARIO_CONEXION. Valor: scgdUser
+Hay que añadir el parámetro: TOKI_MODO_AUTENTICACION. Valor: STANDARD
+Hay que añadir el parámetro: SCGD_PUERTO_CONEXION. Valor: 3140
+Hay que añadir el parámetro: SQLWEB_ROL. Valor: EMRA_ADM
+Hay que añadir el parámetro: JSON_JCYL_PROV_UNIDAD_ORGANICA_OTTS. Valor: {cp: {00: 00013187, 05: 00012840, 09: 00012886, 24: 00012943, 34: 00012999, 37: 00013045, 40: 00013097, 42: 00013143, 47: 00013187, 49: 00013241}, d: 'Oficina Territorial de Trabajo'}
+Hay que añadir el parámetro: PLANIFICADOR.TAREA.EMRAPortafPlanif.PARAM.ACTIVO. Valor: N
+Hay que añadir el parámetro: SCEE_PUERTO_CONEXION_JRS1. Valor: 3122
+Hay que añadir el parámetro: SCEE_APLICACION_CONEXION_JRS1. Valor: jrs1
+Hay que añadir el parámetro: SCGD_CONTRASENHA_CONEXION. Valor: scgdPass
+Hay que añadir el parámetro: USUARIO_EXTERNO_CERTIFICADO_ROL. Valor: EMRA_TMT
+Hay que añadir el parámetro: PLANIFICADOR.TAREA.EMRAEliminacionTemporalesPlanif.CRON. Valor: 0 0/1 * * * ?
+Hay que añadir el parámetro: PLANIFICADOR.TAREA.CACTEliminacionTemporalesPlanif.CRON. Valor: 0 0/1 * * * ?
+Hay que añadir el parámetro: SCEE_CONTRASENHA_CONEXION_JRS1. Valor: sceePass
+Hay que añadir el parámetro: TOKI_URL_REST. Valor: https://desservicios3.jcyl.es/toki/oauth/token
+Hay que añadir el parámetro: TOKEN_URL_REST. Valor: https://desservicios3.jcyl.es/toki/oauth/token
+Hay que añadir el parámetro: SCEE_USUARIO_CONEXION_JRS1. Valor: sceeUser
+Hay que añadir el parámetro: SCGD_APLICACION_CONEXION. Valor: sgd1
+Hay que añadir el parámetro: TOKI_URL_CERT_AUTENTICACION. Valor: rest/autenticacert/usuario
+Hay que añadir el parámetro: SCEX_URL_REST. Valor: https://desservicios3.jcyl.es/scre/scex
+Hay que añadir el parámetro: TOKI_APP_FUNCIONES_EXTENDIDAS_JWT_AUTHORITY. Valor: COMU
+Hay que añadir el parámetro: TOKI_CLAVE_PUBLICA. Valor: -----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8o9KuSqGV8M4x8fyMJIl\ntOIwiqHx2mhVmTdnS+bqsVwXpGRJfD/yetddSs/yXbILqVRjIGvvN1k4w5klWmI0\n1YpJvH5QwIkfe44b6DhEFw7TtbbxGXcAoPYS4h8lbvsdWCO8cRJbs0UZHCay+gBI\nRyGVXcoKbx7v1Ovn3+U2UVILJDQn5zRa54JeAc2b920BGQAyk/yy1A5gQoQ/5MEv\nv2j3XCBkOY6py56oqbVVXb65VGdAunqO/FeqEakPeY9IKCB/EtNHjiHPAkbcdzJA\npvRsAgvdfkEKxzgP9GuXLooLIRXie7iCEMZ7WxfZvhfrHUtUUl2DvFxB2Py6QQKJ\newIDAQAB\n-----END PUBLIC KEY-----\n
+Hay que añadir el parámetro: URL_JASPERSERVER. Valor: https://desservicios3.jcyl.es/jasperserver
+Hay que añadir el parámetro: OAUTH2_URL_REST. Valor: https://desservicios3.jcyl.es/toki/
+Hay que cambiar el valor del parámetro: URL_SEGURA_SERVIDOR_CEE. Debe tener el valor https://desservicios3.jcyl.es
+Hay que cambiar el valor del parámetro: GSMS_URL_REST_CONSULTASMS. Debe tener el valor https://desservicios3.jcyl.es/gsms/rest/in/consultaSMS
+Hay que cambiar el valor del parámetro: SCEE_TAMANO_MAX_UPLOAD_SCPD. Debe tener el valor 20
+Hay que cambiar el valor del parámetro: AUTENTIFICACION_CERTIFICADO_URL_EXITO. Debe tener el valor EMRAAccesoCert.jsp
+Hay que cambiar el valor del parámetro: CORREO_EXTERNO_ACTIVO. Debe tener el valor S
+Hay que cambiar el valor del parámetro: URL_REGISTRO_ENTRADA. Debe tener el valor http://wwwpre.ae.jcyl.es/retews30/services/RegistroTelematicoServicio
+Hay que cambiar el valor del parámetro: GSMS_URL_REST_ENVIOSMS. Debe tener el valor https://desservicios3.jcyl.es/gsms/rest/in/envioSMS
+Hay que cambiar el valor del parámetro: SCEE_TAMANO_MAX_UPLOAD_SGD1. Debe tener el valor 1
+Hay que cambiar el valor del parámetro: SICAS_URL. Debe tener el valor t3://sicasdes.jcyl.es:16101,sicasdes.jcyl.es:16102
+Hay que cambiar el valor del parámetro: URL_CONFIG_FIRMA. Debe tener el valor https://wwwpre.ae.jcyl.es/RequisitosAE/firmaScript/config/firmaConfig.js
+Hay que cambiar el valor del parámetro: SERVIDOR_CORREO_NOMBRE. Debe tener el valor noticee
+Hay que cambiar el valor del parámetro: SCEE_SERVIDOR_CONEXION_FCR1. Debe tener el valor servicioscee
+Hay que cambiar el valor del parámetro: SCEE_SERVIDOR_CONEXION_PCS1. Debe tener el valor servicioscee
+Hay que cambiar el valor del parámetro: URL_MALAQUIAS_2. Debe tener el valor http://aeprer2srv.ae.jcyl.es/MalaquiasServicio/services/MalaquiasWS20
+Hay que cambiar el valor del parámetro: ENTORNO. Debe tener el valor Desarrollo
+Hay que cambiar el valor del parámetro: URL_SUT_SOA. Debe tener el valor http://soaaspre.ae.jcyl.es/gateway/services/SID0003116
+Hay que cambiar el valor del parámetro: SCEE_PUERTO_CONEXION_GAD1. Debe tener el valor 3122
+Hay que cambiar el valor del parámetro: AUTENTIFICACION_CERTIFICADO_TRIPLE_DES. Debe tener el valor 000000000000000000000000000000000000000000000000
+Hay que cambiar el valor del parámetro: SICAS_URL_REST. Debe tener el valor https://sicasdes.jcyl.es/rest
+Hay que cambiar el valor del parámetro: URL_REQUISITOS_MINIMOS. Debe tener el valor https://wwwpre.ae.jcyl.es/RequisitosAE/
+Hay que cambiar el valor del parámetro: URL_AUTENTIFICACION_CERTIFICADO. Debe tener el valor https://autenticacion-pre.ae.jcyl.es
+Hay que cambiar el valor del parámetro: URL_ECONOMIA_EMPLEO. Debe tener el valor https://gobierno.jcyl.es/web/es/consejerias/consejeria-empleo-industria.html
+Hay que cambiar el valor del parámetro: URL_METADATOS_2. Debe tener el valor http://aeprer2srv.ae.jcyl.es/MetaDatosServicio/services/MetadatosWS20
+Hay que cambiar el valor del parámetro: URL_SICAS_SERVICIOS_MOVE_WS. Debe tener el valor https://sicasdes.jcyl.es/WebServicesMOVE
+Hay que cambiar el valor del parámetro: URL_VISOR_XADES. Debe tener el valor https://wwwpre.ae.jcyl.es/vixa/visualizar
+Hay que cambiar el valor del parámetro: URL_SERVIDOR_CEE. Debe tener el valor http://desservicios3.jcyl.es
+Hay que cambiar el valor del parámetro: RS_HOST_SERVER. Debe tener el valor http://desservicios3.jcyl.es/emra/reports
+Hay que cambiar el valor del parámetro: SCEE_SERVIDOR_CONEXION_SGD1. Debe tener el valor servicioscee
+Hay que cambiar el valor del parámetro: URL_FIRMA. Debe tener el valor http://firma5ipre.ae.jcyl.es
+Hay que cambiar el valor del parámetro: SICAS_URL_ALTERNATIVA. Debe tener el valor t3://sicasdes.jcyl.es:16101,sicasdes.jcyl.es:16102
+Hay que cambiar el valor del parámetro: AUTENTIFICACION_CERTIFICADO_URL_ERROR. Debe tener el valor loginCertificado.jsp
+---------Comenzamos menus-----------------
+
+---------Roles que faltan-----------------
+
+---------Asignaciones que faltan-----------------
+
+Hay que añadir al rol 'EMRA_ADM' la función de menú 'EMRAEliminacionTemporales.do?accion=lanzarEliminacionTemporales'(EMRA_05_08)
+Hay que añadir al rol 'EMRA_ADM' la función de menú 'EMRASolicitudAnexoIV.do?accion=gestion'(EMRA_24_05)
+Hay que añadir al rol 'EMRA_ADM' la función de menú 'EMRAFirmas.do?accion=detalleFirmaJSPRL'(EMRA_39_04)
+Hay que añadir al rol 'EMRA_ADM' la función de menú 'EMRAGenerarInforme.do?accion=generarPDF'(EMRA_60)
+Hay que añadir al rol 'EMRA_ADM' la función 'EMRASolicitudAnexoIV.do'(EMRA_70)
+Hay que añadir al rol 'EMRA_ADM' la función 'EMRAEnvio.do'(EMRA_71)
+Hay que añadir al rol 'EMRA_TMT' la función de menú 'EMRAPlanTMTTMT.do?accion=borrame'(EMRA_09_03)
+---------Roles que sobran-----------------
+
+---------asignaciones que sobran-----------------
+
+Hay que borrar del rol 'EMRA_ADM' la función de menú 'EMRAPlanGenerarAnexoIV.do?accion=gestion'(EMRA_09_05)
+Hay que borrar del rol 'EMRA_GES' la función de menú 'Tramites.do?accion=buscar&nuevaConsulta=SI&tipo=t'(EMRA_24_03)
+Hay que borrar del rol 'EMRA_GES' la función de menú 'Tramites.do?accion=buscar&nuevaConsulta=SI&tipo=v'(EMRA_25_04)
+Hay que borrar del rol 'EMRA_GES' la función de menú 'Correo.do?accion=alta'(EMRA_27_01)
+Hay que borrar del rol 'EMRA_GES' la función de menú 'Correo.do?accion=listar'(EMRA_27_02)
+Hay que borrar del rol 'EMRA_GES' la función 'RecuperaDocumentoLDOE.do'(EMRA_30)
+Hay que borrar del rol 'EMRA_GESP' la función de menú 'Tramites.do?accion=buscar&nuevaConsulta=SI&tipo=t'(EMRA_24_03)
+Hay que borrar del rol 'EMRA_GESP' la función de menú 'Tramites.do?accion=buscar&nuevaConsulta=SI&tipo=v'(EMRA_25_05)
+Hay que borrar del rol 'EMRA_GESP' la función de menú 'Correo.do?accion=alta'(EMRA_27_01)
+Hay que borrar del rol 'EMRA_GESP' la función de menú 'Correo.do?accion=listar'(EMRA_27_02)
+Hay que borrar del rol 'EMRA_GESP' la función 'RecuperaDocumentoLDOE.do'(EMRA_30)
