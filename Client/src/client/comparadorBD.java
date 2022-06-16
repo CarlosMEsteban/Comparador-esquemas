@@ -1,9 +1,26 @@
 package client;
+
+import client.ot.ColumnaOT;
+
+import client.ot.ConstraintOT;
+
+import client.ot.IndiceOT;
+
+import client.ot.ParametroOT;
+import client.ot.PermisoOT;
+import client.ot.ProcedimientoOT;
+import client.ot.ProcesoOT;
+import client.ot.SinonimoOT;
+import client.ot.TriggerOT;
+
+import client.ot.VistaOT;
+
 import java.io.BufferedReader;
 
 import java.util.ArrayList;
 
 import javax.swing.JProgressBar;
+
 
 public class comparadorBD 
 {
@@ -12,8 +29,8 @@ public class comparadorBD
   JProgressBar jProgressBar1;
   Logger bw;
   
-    private ArrayList faltan = new ArrayList();
-    private ArrayList sobran = new ArrayList();
+    private ArrayList<String> lFaltan = new ArrayList<String>();
+    private ArrayList<String> lSobran = new ArrayList<String>();
     private ArrayList faltanCols = new ArrayList();
     private ArrayList sobranCols = new ArrayList();
     private ArrayList cambianCols = new ArrayList();
@@ -122,12 +139,25 @@ public class comparadorBD
       sobran(listaTablasDes, listaTablasOtro);
 
       
-      for (int i = 0; i < faltan.size() ; i++)
-        bw.escribeLinea("Crear la tabla " + ((String) faltan.get(i)));
+      for (String nbTabla : lFaltan)
+      {
+        bw.escribeLinea("Crear la tabla " + nbTabla);
+      }
         
-      for (int i = 0; i < sobran.size() ; i++)
-        bw.escribeLinea("Borrar la tabla " + ((String) sobran.get(i)));
+      for (String nbTabla : lSobran)
+        bw.escribeLinea("Borrar la tabla " + nbTabla);
+        
+      if (lFaltan != null && lFaltan.size() > 0)
+      {
+        // TODO Coger la lista de columnas de Des sólo una vez
+        ArrayList<ColumnaOT> lCols = cogeListaCol(brDes);
+        CreaScript.faltanTablas(lFaltan, lCols);
+      }
+      CreaScript.sobranTablas(lSobran);
+      
       System.out.println("Salimos de tablas");
+      
+      
     }
       
     catch (Exception e)
@@ -138,6 +168,11 @@ public class comparadorBD
         throw e;
       }
 
+      
+    }
+    
+    private void crearTabla(String nbTabla)
+    {
       
     }
     
@@ -259,7 +294,7 @@ public class comparadorBD
             j++;
           }
           if (!aux.equals(tabla))
-            faltan.add(tabla);
+            lFaltan.add(tabla);
         }
       }
       catch (Exception e)
@@ -291,7 +326,7 @@ public class comparadorBD
             j++;
           }
           if (!aux.equals(tabla))
-            sobran.add(tabla);
+            lSobran.add(tabla);
         
         }
       }
@@ -308,7 +343,7 @@ public class comparadorBD
 
     
     /** Devuelve la lista de columnas del fichero pasado por parámetro */
-    private ArrayList cogeListaCol(BufferedReader br) throws Exception
+    private ArrayList<ColumnaOT> cogeListaCol(BufferedReader br) throws Exception
     {
       final String columnas = "<COLUMNAS>";
       final String columna = "<COLUMNA>";
@@ -351,9 +386,10 @@ public class comparadorBD
             // Extraigo el nombre de la tabla
             String nbTabla = Utiles.extraeEntre(nombreTabla, linea, Utiles.fin(nombreTabla));
         
-            if (! descartarTabla(nbTabla))
+/*            if (! descartarTabla(nbTabla))
             // Apunto la columna
             {
+            */
               ColumnaOT colOT = new ColumnaOT();
               colOT.setNbTabla(nbTabla);
               //Paso a la línea con el nombre de la columna
@@ -382,13 +418,14 @@ public class comparadorBD
           
               // Avanzo para salir del apartado de esta columna
               linea = br.readLine();linea = br.readLine();        
-            }
+/*            }
             else
             // Descarto la columna
             {
               for (int i = 1; i <= 9; i++)
                 linea = br.readLine();
             }
+*/            
           }
         }
       }
@@ -411,17 +448,17 @@ public class comparadorBD
       System.out.println("Entramos en descartarTabla");
       try
       {
-        while (i < faltan.size() && !enc)
+        while (i < lFaltan.size() && !enc)
         {
-          if (faltan.get(i).equals(nombre))
+          if (lFaltan.get(i).equals(nombre))
             enc = true;
           else
             i++;
         }
         i = 0;
-        while (i < sobran.size() && !enc)
+        while (i < lSobran.size() && !enc)
         {
-          if (sobran.get(i).equals(nombre))
+          if (lSobran.get(i).equals(nombre))
             enc = true;
           else
             i++;

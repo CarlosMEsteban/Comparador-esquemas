@@ -1,21 +1,33 @@
 package client;
-import client.ConstraintOT;
+
+import client.ot.ColumnaOT;
+
+import client.ot.ConstraintOT;
+
+import client.ot.SinonimoOT;
+
+import client.ot.VistaOT;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 
 import java.util.ArrayList;
 
+
 public class CreaScript 
 {
 
 public static String directorio;
+public static String directorioScripts;
 
 private static PrintWriter pw;
 
 public static void setDirectorio(String fichResultado)
 {
   directorio = Utiles.extraeDir(fichResultado);
+  directorioScripts = directorio + File.separator + "Scripts";
+  new File(directorioScripts).mkdir();
 }
 /** Pone el comando para eliminar las columnas que sobran */
 public static void sobranColumnas(ArrayList lista) throws Exception
@@ -41,7 +53,7 @@ public static void sobranColumnas(ArrayList lista) throws Exception
           fw.close();
         }
         // Abrimos el nuevo fichero
-        String nbFich = directorio + File.separator + colOT.getNbTabla() + ".sql";
+        String nbFich = directorioScripts + File.separator + colOT.getNbTabla() + ".sql";
         File f = new File(nbFich);
         if (f.exists())
           fw = new FileWriter(nbFich, true);    
@@ -105,7 +117,7 @@ public static void faltanColumnas(ArrayList lista) throws Exception
           fw.close();
         }
         // Abrimos el nuevo fichero
-        String nbFich = directorio + File.separator + colOT.getNbTabla() + ".sql";
+        String nbFich = directorioScripts + File.separator + colOT.getNbTabla() + ".sql";
         File f = new File(nbFich);
         if (f.exists())
           fw = new FileWriter(nbFich, true);    
@@ -120,22 +132,7 @@ public static void faltanColumnas(ArrayList lista) throws Exception
       
       }
       
-      if (colOT.getTipo().equals("BLOB"))
-        cadena += colOT.getNbCol() + " " + colOT.getTipo();
-      else if (colOT.getTipo().equals("CHAR"))
-        cadena += colOT.getNbCol() + " " + colOT.getTipo() + "(" + colOT.getLongitud() + ")";
-      else if (colOT.getTipo().equals("DATE"))
-        cadena += colOT.getNbCol() + " " + colOT.getTipo();
-      else if (colOT.getTipo().equals("NUMBER"))
-        cadena += colOT.getNbCol() + " " + colOT.getTipo() + "(" + colOT.getPrecision() + ", " + colOT.getEscala() + ")";
-      else if (colOT.getTipo().equals("VARCHAR2"))
-        cadena += colOT.getNbCol() + " " + colOT.getTipo() + "(" + colOT.getLongitud() + ")";
-      
-      if (! colOT.getAnulable().equals("Y"))
-        cadena += " NOT NULL";
-      if (! colOT.getDefecto().equals(""))
-        cadena += " DEFAULT " + colOT.getDefecto();
-      cadena += ", ";  
+      cadena += anadirColumna(colOT.getNbCol(), colOT.getTipo(), colOT.getLongitud(), colOT.getPrecision(), colOT.getEscala(), colOT.getAnulable(), colOT.getDefecto()) + ", ";  
     
     }
     if (!tablaActual.equals(""))
@@ -183,7 +180,7 @@ public static void cambianColumnas(ArrayList cambian, ArrayList des, ArrayList o
           fw.close();
         }
         // Abrimos el nuevo fichero
-        String nbFich = directorio + File.separator + colCambiaOT.getNbTabla() + ".sql";
+        String nbFich = directorioScripts + File.separator + colCambiaOT.getNbTabla() + ".sql";
         File f = new File(nbFich);
         if (f.exists())
           fw = new FileWriter(nbFich, true);    
@@ -320,7 +317,7 @@ public static void sobranConstraints(ArrayList lista) throws Exception
           }
         
           // Abrimos el nuevo fichero
-          String nbFich = directorio + File.separator + consOT.getNbTabla() + ".sql";
+          String nbFich = directorioScripts + File.separator + consOT.getNbTabla() + ".sql";
           File f = new File(nbFich);
           if (f.exists())
             fw = new FileWriter(nbFich, true);    
@@ -382,7 +379,7 @@ public static void faltanConstraints(ArrayList lista) throws Exception
             cadena = "";
           }
           // Abrimos el nuevo fichero
-          String nbFich = directorio + File.separator + consOT.getNbTabla() + ".sql";
+          String nbFich = directorioScripts + File.separator + consOT.getNbTabla() + ".sql";
           File f = new File(nbFich);
           if (f.exists())
             fw = new FileWriter(nbFich, true);    
@@ -454,7 +451,7 @@ public static void cambianConstraints(ArrayList cambian, ArrayList des, ArrayLis
             cadena = "";
           }
           // Abrimos el nuevo fichero
-          String nbFich = directorio + File.separator + consOT.getNbTabla() + ".sql";
+          String nbFich = directorioScripts + File.separator + consOT.getNbTabla() + ".sql";
           File f = new File(nbFich);
           if (f.exists())
             fw = new FileWriter(nbFich, true);    
@@ -516,7 +513,7 @@ public static void cambianConstraints(ArrayList cambian, ArrayList des, ArrayLis
       {
     
         // Abrimos el fichero de sinónimos
-        String nbFich = directorio + File.separator + "sinonimos.sql";
+        String nbFich = directorioScripts + File.separator + "sinonimos.sql";
         File f = new File(nbFich);
         fw = new FileWriter(nbFich);
         pw = new PrintWriter(fw);
@@ -551,7 +548,7 @@ public static void cambianConstraints(ArrayList cambian, ArrayList des, ArrayLis
       if (lista.size() != 0)
       {
         // Abrimos el fichero de sinónimos
-        String nbFich = directorio + File.separator + "sinonimos.sql";
+        String nbFich = directorioScripts + File.separator + "sinonimos.sql";
         File f = new File(nbFich);
         if (f.exists())
           fw = new FileWriter(nbFich, true);
@@ -589,7 +586,7 @@ public static void cambianConstraints(ArrayList cambian, ArrayList des, ArrayLis
       {
       
         // Abrimos el fichero de sinónimos
-        String nbFich = directorio + File.separator + "Sinonimos.sql";
+        String nbFich = directorioScripts + File.separator + "Sinonimos.sql";
         File f = new File(nbFich);
         if (f.exists())
           fw = new FileWriter(nbFich, true);
@@ -629,7 +626,7 @@ public static void cambianConstraints(ArrayList cambian, ArrayList des, ArrayLis
       {
     
         // Abrimos el fichero de sinónimos
-        String nbFich = directorio + File.separator + "Secuencias.sql";
+        String nbFich = directorioScripts + File.separator + "Secuencias.sql";
         File f = new File(nbFich);
         fw = new FileWriter(nbFich);
         pw = new PrintWriter(fw);
@@ -665,7 +662,7 @@ public static void cambianConstraints(ArrayList cambian, ArrayList des, ArrayLis
       {
     
         // Abrimos el fichero de secuencias
-        String nbFich = directorio + File.separator + "Secuencias.sql";
+        String nbFich = directorioScripts + File.separator + "Secuencias.sql";
         File f = new File(nbFich);
         if (f.exists())
           fw = new FileWriter(nbFich, true);
@@ -707,7 +704,7 @@ public static void cambianConstraints(ArrayList cambian, ArrayList des, ArrayLis
         {
       
           // Abrimos el fichero de sinónimos
-          String nbFich = directorio + File.separator + "Vistas.sql";
+          String nbFich = directorioScripts + File.separator + "Vistas.sql";
           File f = new File(nbFich);
           fw = new FileWriter(nbFich);
           pw = new PrintWriter(fw);
@@ -742,7 +739,7 @@ public static void cambianConstraints(ArrayList cambian, ArrayList des, ArrayLis
         if (lista.size() != 0)
         {
           // Abrimos el fichero de sinónimos
-          String nbFich = directorio + File.separator + "Vistas.sql";
+          String nbFich = directorioScripts + File.separator + "Vistas.sql";
           File f = new File(nbFich);
           if (f.exists())
             fw = new FileWriter(nbFich, true);
@@ -779,7 +776,7 @@ public static void cambianConstraints(ArrayList cambian, ArrayList des, ArrayLis
         if (cambian.size() != 0)
         {
           // Abrimos el fichero de sinónimos
-          String nbFich = directorio + File.separator + "Vistas.sql";
+          String nbFich = directorioScripts + File.separator + "Vistas.sql";
           File f = new File(nbFich);
           if (f.exists())
             fw = new FileWriter(nbFich, true);
@@ -812,6 +809,99 @@ public static void cambianConstraints(ArrayList cambian, ArrayList des, ArrayLis
  
 
 
+/** Pone el comando para crear las TABLAS que faltan */
+public static void faltanTablas(ArrayList<String> lista, ArrayList<ColumnaOT> lCols) throws Exception
+{
+  FileWriter fw = null;
+  System.out.println("Entramos en faltanTablas");
+  try
+  {
+    for (String nbTabla: lista)
+    {
+      // TODO Factorizar
+      String nbFich = directorioScripts + File.separator + nbTabla + ".sql";
+      File f = new File(nbFich);
+      if (f.exists())
+        fw = new FileWriter(nbFich, true);    
+      else
+        fw = new FileWriter(nbFich);
+      pw = new PrintWriter(fw);
+      
+      pw.println("CREATE TABLE " + nbTabla + "\n("); 
+      
+      for (ColumnaOT colOT : lCols)
+      {
+System.out.println(colOT.getNbTabla());
+        if (colOT.getNbTabla().equals(nbTabla))
+        {
+          pw.println(anadirColumna(colOT.getNbCol(), colOT.getTipo(), colOT.getLongitud(), colOT.getPrecision(), colOT.getEscala(), colOT.getAnulable(), colOT.getDefecto()) + ", ");
+        }
+      }
+      
+      
+      
+      pw.close();
+      fw.close();
+    }
+  }
+  catch (Exception e)
+  {
+    System.out.println(e.getMessage());
+    throw e;
+  }
+  System.out.println("Salimos de faltanTablas");
+}    
     
+/** Pone el comando para borrar las TABLAS que sobran */
+public static void sobranTablas(ArrayList<String> lista) throws Exception
+{
+  FileWriter fw = null;
+  System.out.println("Entramos en sobranTablas");
+  try
+  {
+    for (String nbTabla: lista)
+    {
+      // TODO Factorizar
+      String nbFich = directorioScripts + File.separator + nbTabla + ".sql";
+      File f = new File(nbFich);
+      if (f.exists())
+        fw = new FileWriter(nbFich, true);    
+      else
+        fw = new FileWriter(nbFich);
+      pw = new PrintWriter(fw);
+      
+      pw.println("DROP TABLE " + nbTabla); 
+      pw.close();
+      fw.close();
+    }
+  }
+  catch (Exception e)
+  {
+    System.out.println(e.getMessage());
+    throw e;
+  }
+  System.out.println("Salimos de sobranTablas");
+}       
+
+  private static String anadirColumna(String nbCol, String tipo, String longitud, String precision, String escala, String anulable, String defecto)
+  {
+    String resultado = "";
+    if (tipo.equals("BLOB"))
+      resultado += nbCol + " " + tipo;
+    else if (tipo.equals("CHAR"))
+      resultado += nbCol + " " + tipo + "(" + longitud + ")";
+    else if (tipo.equals("DATE"))
+      resultado += nbCol + " " + tipo;
+    else if (tipo.equals("NUMBER"))
+      resultado += nbCol + " " + tipo + "(" + precision + ", " + escala + ")";
+    else if (tipo.equals("VARCHAR2"))
+      resultado += nbCol + " " + tipo + "(" + longitud + ")";
     
+    if (! anulable.equals("Y"))
+      resultado += " NOT NULL";
+    if (! defecto.equals(""))
+      resultado += " DEFAULT " + defecto;
+    
+    return resultado;
+  }
 }

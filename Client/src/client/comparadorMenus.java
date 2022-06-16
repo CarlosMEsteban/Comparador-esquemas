@@ -1,10 +1,16 @@
 package client;
+
+import client.ot.OrdenadoOT;
+import client.ot.ProcesoOT;
+import client.ot.RolOT;
+
 import java.io.BufferedReader;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
 import javax.swing.JProgressBar;
+
 
 public class comparadorMenus 
 {

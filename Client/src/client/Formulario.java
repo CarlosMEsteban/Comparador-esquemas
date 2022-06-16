@@ -1,7 +1,5 @@
 package client;
 
-
-
 import client.comparador;
 
 import java.awt.Dimension;
@@ -11,11 +9,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import java.io.File;
+
 import javax.swing.JButton;
 import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
-import javax.swing.JProgressBar;
 import javax.swing.JLabel;
+import javax.swing.JProgressBar;
 import javax.swing.SwingConstants;
 
 
@@ -181,8 +180,7 @@ public class Formulario extends JFrame {
             ficheroRes.setText("c:" + File.separator + "j2ee" + File.separator + "Compara esquemas" + File.separator + "Client" + File.separator + "Ejemplos" + File.separator + "resultado.txt");
         }          
 
-        comparador comp = new comparador(jProgressBar1);
-        comp.compara(bDDes.getText(), bDOtro.getText(), menusDes.getText(), menusOtro.getText(),  ficheroRes.getText());
+        new comparador(jProgressBar1).compara(bDDes.getText(), bDOtro.getText(), menusDes.getText(), menusOtro.getText(),  ficheroRes.getText());
         //comp.compara(fichDes, otroFich);
     }
 

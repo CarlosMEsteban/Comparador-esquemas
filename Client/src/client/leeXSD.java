@@ -1,10 +1,12 @@
 package client;
+
+import java.awt.Dimension;
 import java.awt.Frame;
+import java.awt.Toolkit;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+
 import javax.swing.UIManager;
-import java.awt.Dimension;
-import java.awt.Toolkit;
 
 public class leeXSD 
 {

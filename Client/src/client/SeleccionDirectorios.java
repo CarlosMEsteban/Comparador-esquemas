@@ -1,4 +1,5 @@
 package client;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -7,7 +8,6 @@ import java.io.File;
 import javax.swing.JFileChooser;
 import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
-
 
 
 public class SeleccionDirectorios implements ActionListener 

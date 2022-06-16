@@ -1,9 +1,20 @@
 package client;
+
+import client.ot.ColumnaOT;
+
+import client.ot.ConstraintOT;
+
+import client.ot.IndiceOT;
+
+import client.ot.ParametroOT;
+import client.ot.PermisoOT;
+import client.ot.ProcedimientoOT;
+import client.ot.SinonimoOT;
+
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
-import java.io.FileWriter;
+
 
 public class Utiles 
 {
