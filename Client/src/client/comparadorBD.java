@@ -35,6 +35,8 @@ public class comparadorBD
     private ArrayList sobranCols = new ArrayList();
     private ArrayList cambianCols = new ArrayList();
     private ArrayList sobranInd = new ArrayList();
+    
+    private ArrayList<ColumnaOT> lColsDes = null;
   
 
   public comparadorBD(JProgressBar jPB, Logger bWriter)    
@@ -150,8 +152,8 @@ public class comparadorBD
       if (lFaltan != null && lFaltan.size() > 0)
       {
         // TODO Coger la lista de columnas de Des sólo una vez
-        ArrayList<ColumnaOT> lCols = cogeListaCol(brDes);
-        CreaScript.faltanTablas(lFaltan, lCols);
+        lColsDes = cogeListaCol(brDes);
+        CreaScript.faltanTablas(lFaltan, lColsDes);
       }
       CreaScript.sobranTablas(lSobran);
       
@@ -229,14 +231,16 @@ public class comparadorBD
       System.out.println("Entramos en columnas");
       try
       {
-        ArrayList listaDes = cogeListaCol(brDes);
+        // Si en el otro entorno falta alguna tabla, ya he cogido las columnas de des
+        if (lColsDes == null || lColsDes.isEmpty())
+          lColsDes = cogeListaCol(brDes);
         ArrayList listaOtro = cogeListaCol(brOtro); 
 
 
 
-        faltanCols(listaDes, listaOtro);
-        sobranCols(listaDes, listaOtro);
-        difCols(listaDes, listaOtro);
+        faltanCols(lColsDes, listaOtro);
+        sobranCols(lColsDes, listaOtro);
+        difCols(lColsDes, listaOtro);
         
         CreaScript.sobranColumnas(sobranCols);
       
@@ -255,7 +259,7 @@ public class comparadorBD
           bw.escribeLinea("Hay que añadir las columnas: " + colOT.getNbTabla() + "." + colOT.getNbCol());
         }
         
-        CreaScript.cambianColumnas(cambianCols, listaDes, listaOtro);
+        CreaScript.cambianColumnas(cambianCols, lColsDes, listaOtro);
         
         for (int i = 0; i < cambianCols.size(); i++)
         {
